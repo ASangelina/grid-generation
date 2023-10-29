@@ -1,4 +1,7 @@
+package br.udesc.entities;
+
 public class Discipline {
+
     private String disciplineCode;
     private String description;
     private String professorCode;
@@ -18,7 +21,6 @@ public class Discipline {
         this.timeRestriction = timeRestriction;
     }
 
-    // Getters and Setters
     public String getDisciplineCode() {
         return disciplineCode;
     }
@@ -35,7 +37,7 @@ public class Discipline {
         this.description = description;
     }
 
-    public int getProfessorCode() {
+    public String getProfessorCode() {
         return professorCode;
     }
 
@@ -74,6 +76,4 @@ public class Discipline {
     public void setTimeRestriction(String timeRestriction) {
         this.timeRestriction = timeRestriction;
     }
-
-    
 }

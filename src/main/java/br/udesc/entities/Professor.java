@@ -1,7 +1,9 @@
-import java.util.ArrayList;
+package br.udesc.entities;
+
 import java.util.List;
 
-public class ProfessorInitial {
+public class Professor {
+
     private int code;
     private String name;
     private List<String> disciplines;
@@ -14,7 +16,6 @@ public class ProfessorInitial {
         this.restrictedDays = restrictedDays;
     }
 
-    // Getters and Setters
     public int getCode() {
         return code;
     }
@@ -46,6 +47,4 @@ public class ProfessorInitial {
     public void setRestrictedDays(List<String> restrictedDays) {
         this.restrictedDays = restrictedDays;
     }
-
-    
 }

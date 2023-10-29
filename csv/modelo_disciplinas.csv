@@ -1,0 +1,6 @@
+codigo_disciplina; descricao; codigo_professor; carga_horaria; credito; restricao_aula; restricao_tempo
+15MAD; Matemática Discreta; 3868214; 72; 4; 0; 0
+25ALG; Álgebra Linear; 3868214; 72; 4; 2; 0
+25PRE; Probabilidade e Estatística; 3868214; 72; 4; 2; 0
+35CDI; Cálculo Diferencial e Integral; 3868214; 108; 6; 0; 0
+45LOG; Lógica Matemática; 3868214; 36; 2; 0; 1

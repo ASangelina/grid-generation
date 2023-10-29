@@ -10,6 +10,6 @@ public class Main {
 
         app.get("/generator", ctx -> ctx.json("Rota que deve retornar um componente vue!"));
 
-        app.post("/api/grid/generator", ctx -> ctx.json("Rota que deve executar o algorítimo!"));
+        app.post("/api/grid-generator", ctx -> ctx.json("Rota que deve executar o algorítimo!"));
     }
 }
