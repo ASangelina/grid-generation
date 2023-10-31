@@ -1,26 +1,39 @@
 package br.udesc.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class Professor {
 
-    private int code;
-    private String name;
-    private List<String> disciplines;
-    private List<String> restrictedDays;
+    @JsonProperty(value = "codigo_professor")
+    private String code;
 
-    public Professor(int code, String name, List<String> disciplines, List<String> restrictedDays) {
+    @JsonProperty(value = "nome_do_professor")
+    private String name;
+
+    @JsonProperty(value = "disciplinas_codico")
+    private List<String> disciplines;
+
+    @JsonProperty(value = "dias_preferenciais")
+    private List<Weekdays> preferenceDays;
+
+    @JsonProperty(value = "dias_obrigatorio")
+    private List<Weekdays> mandatoryDays;
+
+    public Professor(String code, String name, List<String> disciplines, List<Weekdays> preferenceDays, List<Weekdays> mandatoryDays) {
         this.code = code;
         this.name = name;
         this.disciplines = disciplines;
-        this.restrictedDays = restrictedDays;
+        this.preferenceDays = preferenceDays;
+        this.mandatoryDays = mandatoryDays;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -40,11 +53,19 @@ public class Professor {
         this.disciplines = disciplines;
     }
 
-    public List<String> getRestrictedDays() {
-        return restrictedDays;
+    public List<Weekdays> getPreferenceDays() {
+        return preferenceDays;
     }
 
-    public void setRestrictedDays(List<String> restrictedDays) {
-        this.restrictedDays = restrictedDays;
+    public void setPreferenceDays(List<Weekdays> preferenceDays) {
+        this.preferenceDays = preferenceDays;
+    }
+
+    public List<Weekdays> getMandatoryDays() {
+        return mandatoryDays;
+    }
+
+    public void setMandatoryDays(List<Weekdays> mandatoryDays) {
+        this.mandatoryDays = mandatoryDays;
     }
 }
