@@ -8,8 +8,7 @@ import io.javalin.vue.VueComponent;
 public class Main {
 
     public static void main(String[] args) {
-        var app = Javalin.create(config -> config.vue.vueAppName = "app")
-                .start(8080);
+        var app = Javalin.create().start(8080);
 
         app.get("/generator", new VueComponent("generator-page"));
 
