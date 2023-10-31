@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    app.component("generator-page", {
+    Vue.component("generator-page", {
         template: "#generator-page"
     });
 </script>
