@@ -1,0 +1,52 @@
+codigo_disciplina; descricao; codigo_professor; carga_horaria; credito; restricao_aula; restricao_tempo
+15ARC; Arquitetura de Computadores;1033292446; 72; 4; 0; 0  
+15CEX; Comunicação e Expressão; 1033195192; 36; 2; 0; 2
+15FAD; Fundamentos de Administração; 1033132265; 36; 2; 0; 2
+15FES; Fundamentos de Engenharia de Software; 3814432; 36; 2
+15INP; Introdução à Programação; 1033292446; 108; 6 ; 0; 0
+15MAD; Matemática Discreta; 3868214; 72; 4; 2; 0
+25ALG; Álgebra Linear; 3868214; 72; 4; 1; 0
+25GRH; Gestão de Recursos Humanos;1033178279; 36; 2; 0; 2
+25PRE; Probabilidade e Estatística; 3868214; 72; 4; 1; 0
+25PRS; Processo de Software; 1033194876; 36; 2; 0; 1
+25PRO1; Programação I; 1033203127; 72; 4; 1; 0 
+25PRI; Projeto de Interfaces; 1033168052; 36; 2; 0; 0
+25SIS; Sistemas Operacionais; 1033292446; 36; 2; 0; 2
+35CDI; Cálculo Diferencial e Integral; 3868214; 108; 6; 2; 0
+35REQ; Engenharia de Requisitos; 1033194876; 36; 2; 0; 2
+35FCO; Fundamentos de Contabilidade; 1033257848; 36; 2; 0; 2
+35MPC; Metodologia da Pesquisa Científica; 1033195192; 36; 2; 0; 1
+35BAD; Modelagem de Banco de Dados; 1033211074; 72; 4; 1; 0 
+35PRO2; Programação II;1033203127; 72; 4; 1; 0 
+45PRJ; Desenho e Projeto de Software; 1033211074; 72; 4; 1; 0
+45EMP; Empreendedorismo;1033132265; 72; 4; 2; 0
+45EST; Algoritmos e Estrutura de Dados; 6515711; 72; 4; 0; 0
+45LOG; Lógica Matemática; 3868214; 36; 2; 0; 1
+45PBD; Persistência de Dados; 1033211074; 72; 4; 1; 0 
+45PIN1; Projeto Integrador I; 6515711; 72; 4; 2; 0
+55DSW; Desenvolvimento de Sistemas para Web; 1033140252; 108; 6; 0; 0
+55EQU; Engenharia da Qualidade; 1033132265; 36; 2; 0; 2
+55PPR; Padrões de Projeto; 6515711; 72; 4; 2; 0
+55MQU; Métodos Quantitativos; 512010901; 72; 4; 2; 0
+55RED; Redes de Computadores; 1033292446; 36; 2; 0; 1
+55PIN2; Projeto Integrador II; 3433579; 72; 4; 2; 0
+65DSD; Desenvolvimento de Sistemas Paralelos e Distribuídos; 6611893; 108; 6; 0 ; 0
+65DDM; Desenvolvimento para Dispositivos Móveis; 1033203127; 72; 4; 1; 0 
+65EEO; Estratégias de Experimentação e Observação; 3814432; 36; 0; 1
+65GRP1; Gerenciamento de Projetos I; 3814432 ; 36; 2; 0; 2
+65TES; Testes de Software; 1033194876; 72; 4; 1; 0
+65PIN3; Projeto Integrador III; 512010901; 72; 4; 2; 0
+75ARS; Arquitetura de Software; 3381501; 36; 2; 0; 1
+75DJO; Desenvolvimento de Jogos; 6515711; 72; 4; 2; 0
+75GCF; Gerência de Configuração; 1033168052; 36; 2 ; 0; 0
+75GRP2; Gerenciamento de Projetos II; 3814432; 72; 4; 22; 0
+75INC; Inteligência Computacional; 6611893; 72; 4; 1; 0
+75QUA; Qualidade de Software; 3814432; 36; 2; 0; 2
+75TCC1; Orientação para Trabalho de Conclusão de Curso; 3381501; 36; 2; 0; 2
+85EAG; Engenharia de Software Orientada a Agentes; 6611893; 72; 4; 1; 0
+85EEC; Engenharia Econômica; 1033185747; 72; 4; 1; 0
+85MAN; Manutenção de Software; 1033168052; 36; 2; 0; 0
+85MPS; Melhoria de Processo de Software; 1033168052; 36; 2; 0; 0
+85MEF; Métodos Formais; 1033194876; 72; 4; 1; 0
+85MKT; Marketing; 1033132265; 36; 2; 0; 0
+85ECS17; Ética Computador e Sociedade; 1033257848; 36; 2; 0; 0
