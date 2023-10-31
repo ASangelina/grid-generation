@@ -1,15 +1,18 @@
 package br.udesc;
 
+import br.udesc.log.Log;
 import io.javalin.Javalin;
+import io.javalin.vue.VueComponent;
 
 @SuppressWarnings({"resource"})
 public class Main {
 
     public static void main(String[] args) {
-        var app = Javalin.create().start(8080);
+        var app = Javalin.create(config -> config.vue.vueAppName = "app")
+                .start(8080);
 
-        app.get("/generator", ctx -> ctx.json("Rota que deve retornar um componente vue!"));
+        app.get("/generator", new VueComponent("generator-page"));
 
-        app.post("/api/grid-generator", ctx -> ctx.json("Rota que deve executar o algorítimo!"));
+        app.post("/api/grid-generator", ctx -> Log.info(ctx.body(), Main.class));
     }
 }
