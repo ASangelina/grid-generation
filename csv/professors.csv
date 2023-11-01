@@ -1,19 +1,19 @@
 codigo_professor; nome_do_professor; disciplinas_codico; dias_obrigatorio; dias_preferenciais
-1033292446;  LEANDRO LOFF;  *15ARC;  25SIS;  55RED*;  *segunda,sexta*;  **
-1033195192;  SCHEILA PATRICIA DE BORBA CURRY;  *15CEX,35MPC*;  *sexta*;  **
-1033132265;  CARLOS FERNANDO CRUZ;  *15FAD,45EMP,55EQU,85MKT*;  *quarta,sexta,sabado*; **
+1033292446;  LEANDRO LOFF;  *15ARC;  25SIS;  55RED*;  *terca,quarta,quinta,sabado*;  **
+1033195192;  SCHEILA PATRICIA DE BORBA CURRY;  *15CEX,35MPC*;  *segunda,terca,quarta,quinta,sabado*;  **
+1033132265;  CARLOS FERNANDO CRUZ;  *15FAD,45EMP,55EQU,85MKT*;  *segunda,terca,quinta*; **
 3814432;  PABLO SCHOEFFEL;  *15FES,65EEO,65GRP1,65GRP2,75QUA*;  **;  *segunda,terca,quinta*
 3433579;  CARLOS ALBERTO BARTH;  *15INP,45EST,55PIN2*;  **;  *segunda,terca,quinta,sabado*
 512010901;  MARCELO DE SOUZA;  *55MQU,65PIN3*;  **;  *segunda,terca,quinta*
 3868214;  PAOLO MOSER;  *15MAD,25ALG,25PRE,35CDI,45LOG*;  **;  *segunda,terca,quinta,sexta,sabado*  
 1033178279;  VANIELE WEINRICH STUEPP;  *25GRH*;  *quarta*;  **
-1033168052;  PEDRO SIDNEI ZANCHETT;  *25PRI,75GCF,85MAN,85MPS*;  *quinta,sexta*;  **
-1033203127;  MATTHEUS DA HORA FRANCA;  *25PRO1,35PRO2,65DDM*;  *segunda,terca,quinta*;   **
+1033168052;  PEDRO SIDNEI ZANCHETT;  *25PRI,75GCF,85MAN,85MPS*;  *segunda,terca,quarta*;  **
+1033203127;  MATTHEUS DA HORA FRANCA;  *25PRO1,35PRO2,65DDM*;  *quarta,sexta,sabado*;   **
 1033194876;  MARILIA GUTERRES FERREIRA;  *25PRS,35REQ,65TES,85MEF*;  **;   *segunda,terca,quarta*
-1033211074;  RODRIGO RAMOS NOGUEIRA;  *35BAD,45PBD,45PRJ*; *terca,quarta,quinta*; **
+1033211074;  RODRIGO RAMOS NOGUEIRA;  *35BAD,45PBD,45PRJ*; *segunda,sexta,sabado*; **
 6515711;  ADILSON VAHLDICK;  *45PIN1,55PPR,75DJO*;  **; *quarta,quinta,sexta,sabado*
 1033257848;  JESSICA GIOVANA NOLLI;  *35FCO,85ECS17*;  **; *quarta,sabado*
 1033140252;  PAULO ROBERTO FARAH;  *55DSW*;  **;  *segunda,terca*
 6611893;  FERNANDO DOS SANTOS;  *65DSD,75INC,85EAG*;  **;  *segunda,terca,quinta,sabado*  
 3381501;  GERALDO MENEGAZZO VARELA;  *75ARS,5TCC1*;  **;  *quarta*
-1033185747;  REGINALDO OTTO NAU;  *85EEC*;  *sexta*;  **
+1033185747;  REGINALDO OTTO NAU;  *85EEC*;  *segunda,terca,quarta,quinta,sabado*;  **
