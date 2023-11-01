@@ -1,7 +1,7 @@
 codigo_professor; nome_do_professor; disciplinas_codico; dias_obrigatorio; dias_preferenciais
 1033292446;  LEANDRO LOFF;  *15ARC;  25SIS;  55RED*;  *segunda,sexta*;  **
 1033195192;  SCHEILA PATRICIA DE BORBA CURRY;  *15CEX,35MPC*;  *sexta*;  **
-1033132265;  CARLOS FERNANDO CRUZ;  *15FAD,45EMP,55EQU,85MKT*;  *quarta,sexta,sabado*
+1033132265;  CARLOS FERNANDO CRUZ;  *15FAD,45EMP,55EQU,85MKT*;  *quarta,sexta,sabado*; **
 3814432;  PABLO SCHOEFFEL;  *15FES,65EEO,65GRP1,65GRP2,75QUA*;  **;  *segunda,terca,quinta*
 3433579;  CARLOS ALBERTO BARTH;  *15INP,45EST,55PIN2*;  **;  *segunda,terca,quinta,sabado*
 512010901;  MARCELO DE SOUZA;  *55MQU,65PIN3*;  **;  *segunda,terca,quinta*
