@@ -1,4 +1,4 @@
-codigo_disciplina; descricao; codigo_professor; carga_horaria; credito; restricao_aula; restricao_tempo
+discipline_code; description; professor_code; work_hours; credits; class_restriction; time_restriction
 15ARC; Arquitetura de Computadores;1033292446; 72; 4; 0; 0  
 15CEX; Comunicação e Expressão; 1033195192; 36; 2; 0; 2
 15FAD; Fundamentos de Administração; 1033132265; 36; 2; 0; 2

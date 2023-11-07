@@ -4,25 +4,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Discipline {
 
-    @JsonProperty(value = "codigo_disciplina")
+    @JsonProperty(value = "discipline_code")
     private String disciplineCode;
 
-    @JsonProperty(value = "descricao")
+    @JsonProperty(value = "description")
     private String description;
 
-    @JsonProperty(value = "codigo_professor")
+    @JsonProperty(value = "professor_code")
     private String professorCode;
 
-    @JsonProperty(value = "carga_horaria")
+    @JsonProperty(value = "work_hours")
     private int workHours;
 
-    @JsonProperty(value = "credito")
+    @JsonProperty(value = "credits")
     private int credits;
 
-    @JsonProperty(value = "restricao_aula")
+    @JsonProperty(value = "class_restriction")
     private ClassRestriction classRestriction;
 
-    @JsonProperty(value = "restricao_tempo")
+    @JsonProperty(value = "time_restriction")
     private TimeRestriction timeRestriction;
 
     public Discipline(String disciplineCode, String description, String professorCode, int workHours, int credits,
