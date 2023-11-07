@@ -6,19 +6,19 @@ import java.util.List;
 
 public class Professor {
 
-    @JsonProperty(value = "codigo_professor")
+    @JsonProperty(value = "code")
     private String code;
 
-    @JsonProperty(value = "nome_do_professor")
+    @JsonProperty(value = "name")
     private String name;
 
-    @JsonProperty(value = "disciplinas_codico")
+    @JsonProperty(value = "disciplines")
     private List<String> disciplines;
 
-    @JsonProperty(value = "dias_preferenciais")
+    @JsonProperty(value = "preference_days")
     private List<Weekdays> preferenceDays;
 
-    @JsonProperty(value = "dias_obrigatorio")
+    @JsonProperty(value = "mandatory_days")
     private List<Weekdays> mandatoryDays;
 
     public Professor(String code, String name, List<String> disciplines, List<Weekdays> preferenceDays, List<Weekdays> mandatoryDays) {
