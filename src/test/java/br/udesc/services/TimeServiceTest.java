@@ -42,9 +42,9 @@ public class TimeServiceTest extends TestCase {
         diasDaSemanaRestritoC.add(Weekdays.SATURDAY);
 
 
-        Professor professorLeandro = new Professor("1033292446", "LEANDRO LOFF",disciplinesL, diasDaSemanaPreferencial,diasDaSemanaRestrito);
-        Professor professorSheila = new Professor("1033195192", "SCHEILA PATRICIA DE BORBA CURRY",disciplinesS, diasDaSemanaPreferencialS,diasDaSemanaRestritoS);
-        Professor professorCarlos = new Professor("1033132265", "CARLOS FERNANDO CRUZ",disciplinesC, diasDaSemanaPreferencialC,diasDaSemanaRestritoC);
+        Professor professorLeandro = new Professor("1033292446", "LEANDRO LOFF", null, diasDaSemanaPreferencial,diasDaSemanaRestrito);
+        Professor professorSheila = new Professor("1033195192", "SCHEILA PATRICIA DE BORBA CURRY", null, diasDaSemanaPreferencialS,diasDaSemanaRestritoS);
+        Professor professorCarlos = new Professor("1033132265", "CARLOS FERNANDO CRUZ", null, diasDaSemanaPreferencialC,diasDaSemanaRestritoC);
 
         List<Professor> profe = new ArrayList<>();
         profe.add(professorLeandro);

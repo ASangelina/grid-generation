@@ -1,24 +1,24 @@
 package br.udesc.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.List;
 
 public class Professor {
 
-    @JsonProperty(value = "code")
+    @JSONField(name = "code")
     private String code;
 
-    @JsonProperty(value = "name")
+    @JSONField(name = "name")
     private String name;
 
-    @JsonProperty(value = "disciplines")
+    @JSONField(name = "disciplines")
     private List<Discipline> disciplines;
 
-    @JsonProperty(value = "preference_days")
+    @JSONField(name = "preference_days")
     private List<Weekdays> preferenceDays;
 
-    @JsonProperty(value = "mandatory_days")
+    @JSONField(name = "mandatory_days")
     private List<Weekdays> mandatoryDays;
 
     public Professor(String code, String name, List<Discipline> disciplines, List<Weekdays> preferenceDays, List<Weekdays> mandatoryDays) {

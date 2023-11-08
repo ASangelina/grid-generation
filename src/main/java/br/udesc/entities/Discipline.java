@@ -1,28 +1,28 @@
 package br.udesc.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.alibaba.fastjson.annotation.JSONField;
 
 public class Discipline {
 
-    @JsonProperty(value = "discipline_code")
+    @JSONField(name = "discipline_code")
     private String disciplineCode;
 
-    @JsonProperty(value = "description")
+    @JSONField(name = "description")
     private String description;
 
-    @JsonProperty(value = "professor_code")
+    @JSONField(name = "professor_code")
     private String professorCode;
 
-    @JsonProperty(value = "work_hours")
+    @JSONField(name = "work_hours")
     private int workHours;
 
-    @JsonProperty(value = "credits")
+    @JSONField(name = "credits")
     private int credits;
 
-    @JsonProperty(value = "class_restriction")
+    @JSONField(name = "class_restriction")
     private ClassRestriction classRestriction;
 
-    @JsonProperty(value = "time_restriction")
+    @JSONField(name = "time_restriction")
     private TimeRestriction timeRestriction;
 
     public Discipline(String disciplineCode, String description, String professorCode, int workHours, int credits,

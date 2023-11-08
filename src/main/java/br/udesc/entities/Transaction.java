@@ -1,12 +1,12 @@
 package br.udesc.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.List;
 
 public class Transaction {
 
-    @JsonProperty(value = "professors")
+    @JSONField(name = "professors")
     private List<Professor> professorList;
 
     public Transaction() {
