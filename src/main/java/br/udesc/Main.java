@@ -2,7 +2,7 @@ package br.udesc;
 
 import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
-import br.udesc.services.TimeService;
+import br.udesc.services.GridGenetorService;
 import io.javalin.Javalin;
 import io.javalin.vue.VueComponent;
 
@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         var app = Javalin.create().start(8080);
 
-        TimeService service = new TimeService();
+        var service = new GridGenetorService();
 
         app.get("/generator", new VueComponent("generator-page"));
 

@@ -13,7 +13,7 @@ public class Professor {
     private String name;
 
     @JsonProperty(value = "disciplines")
-    private List<String> disciplines;
+    private List<Discipline> disciplines;
 
     @JsonProperty(value = "preference_days")
     private List<Weekdays> preferenceDays;
@@ -21,7 +21,7 @@ public class Professor {
     @JsonProperty(value = "mandatory_days")
     private List<Weekdays> mandatoryDays;
 
-    public Professor(String code, String name, List<String> disciplines, List<Weekdays> preferenceDays, List<Weekdays> mandatoryDays) {
+    public Professor(String code, String name, List<Discipline> disciplines, List<Weekdays> preferenceDays, List<Weekdays> mandatoryDays) {
         this.code = code;
         this.name = name;
         this.disciplines = disciplines;
@@ -45,11 +45,11 @@ public class Professor {
         this.name = name;
     }
 
-    public List<String> getDisciplines() {
+    public List<Discipline> getDisciplines() {
         return disciplines;
     }
 
-    public void setDisciplines(List<String> disciplines) {
+    public void setDisciplines(List<Discipline> disciplines) {
         this.disciplines = disciplines;
     }
 

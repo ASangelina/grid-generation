@@ -74,7 +74,7 @@ public class TimeServiceTest extends TestCase {
         disciplines.add(disciplineC3);
         disciplines.add(disciplineC4);
 
-        TimeService timeService = new TimeService();
+        TimeService timeService = new TimeService(null, null);
 
 
 

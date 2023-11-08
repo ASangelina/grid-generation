@@ -10,17 +10,15 @@ import java.util.stream.Collectors;
 
 public class TimeService {
 
-
     List<Professor> profs;
     List<Discipline> disciplines;
     String[][] scheduleMatrix;//matriz para solucao
 
-    public TimeService(List<Professor> profs,List<Discipline> disciplines) {
+    public TimeService(List<Professor> profs, List<Discipline> disciplines) {
         this.profs = profs;
         this.disciplines = disciplines;
         this.scheduleMatrix = new String[6][24];
     }
-
 
     public Professor mostRestrictedProfessor() {
         Optional<Professor> professorRestrictionMost = profs.stream()
@@ -40,7 +38,7 @@ public class TimeService {
 
 
     private int countDisciplineForProfessor(Professor professor) {
-        List<String> disciplines = professor.getDisciplines();
+        List<Discipline> disciplines = professor.getDisciplines();
         if (disciplines != null) {
             return disciplines.size();
         }
@@ -74,16 +72,18 @@ public class TimeService {
         int daysWork = 6 - professor.getMandatoryDays().size();
         int maxCreditsDay = 4;
 
-        List<String> disciplinesProfessor = professor.getDisciplines();
+        List<Discipline> disciplinesProfessor = professor.getDisciplines();
 
         Map<String, Integer> mapDisciplines = disciplines.stream()
                 .collect(Collectors.toMap(Discipline::getDisciplineCode, Discipline::getCredits));
+
         int creditsTotal = disciplinesProfessor.stream()
                 .mapToInt(mapDisciplines::get)
                 .sum();
 
         return daysWork * maxCreditsDay - creditsTotal;
     }
+
     public Professor professorMinAvailability(List<Professor> professoress) {
 
         Map<Professor, Integer> resultados = professoress.stream()
@@ -103,6 +103,7 @@ public class TimeService {
         }
         return null;
     }
+
     private boolean checkMaxDailyClass(Discipline discipline) {
         int max = 4;
         if(discipline.getCredits() == max){
@@ -111,6 +112,7 @@ public class TimeService {
             return false;
         }
     }
+
     private boolean checkMaxDailyClassTogether(Discipline discipline) {
         int max = 4;
         if(discipline.getCredits() == max && discipline.getClassRestriction() == ClassRestriction.TOGETHER){
@@ -130,6 +132,7 @@ public class TimeService {
         }
 
     }
+
     private boolean checkMinDailyClassNotRestrict(Discipline discipline) {
         int min = 2;
         if(discipline.getCredits() == min && discipline.getClassRestriction() == ClassRestriction.NONE && discipline.getTimeRestriction() == TimeRestriction.NONE){
@@ -174,7 +177,4 @@ public class TimeService {
 
         return result.get();
     }
-
-    }
-
-
+}
