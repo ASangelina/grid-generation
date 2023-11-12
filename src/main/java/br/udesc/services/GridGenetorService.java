@@ -24,20 +24,23 @@ public class GridGenetorService {
         }
         return professorWithMaxCredits;
 
-}
+    }
+
     public int extractFase(String input) {
         char firstDigit = input.replaceAll("\\D", "").charAt(0);
         return Character.getNumericValue(firstDigit);
     }
 
-    public Map<Integer, Discipline[][]> buildSchedule(Transaction transaction) {
+    //TODO: proximo passo preencher a phaseSchedule mais completa.
+    public void buildSchedule(Transaction transaction) {
+        //public Map<Integer, Discipline[][]> buildSchedule(Transaction transaction) {
         Map<Integer, Discipline[][]> grades = new HashMap<>();
 
         //Map para ter a soma total de creditos;
-        Map<Integer,Integer> somaTotalCreditos = new HashMap<>();
+        Map<Integer, Integer> somaTotalCreditos = new HashMap<>();
 
         List<Professor> professorList = transaction.getProfessorList();
-        for (Professor professor : professorList){
+        for (Professor professor : professorList) {
             for (Discipline discipline : professor.getDisciplines()) {
                 int fase = extractFase(discipline.getDisciplineCode());
                 if (!somaTotalCreditos.containsKey(fase)) {
@@ -66,6 +69,7 @@ public class GridGenetorService {
             }
             Discipline[][] phaseSchedule = grades.get(fase);
 
+            //usar para acabar o algoritmo, tem necessidade?
             int totalCreditsInPhase = 0;
             for (Discipline[] daySchedule : phaseSchedule) {
                 for (Discipline d : daySchedule) {
@@ -75,28 +79,41 @@ public class GridGenetorService {
                 }
             }
 
-            if (totalCreditsInPhase == somaTotalCreditos.get(fase)) {
-                // A fase está completa, pule para a próxima disciplina
-                continue;
-            }
 
-            //TODO: ajustar para alocar até a quantidade de creditos dividido/2, se for 2:1 uma posicao, 4:2 duas posicoes. e assim por diante, até a disciplina seja alocada.
             boolean allocated = false;
+
+            int remainingCredits = discipline.getCredits();
+
             for (int day = 0; day < 6; day++) {
                 for (int lesson = 0; lesson < 2; lesson++) {
                     if (phaseSchedule[lesson][day] == null) {
-                        boolean canAllocate = true;
+                        boolean professorAvailable = true;
                         for (int otherFase : grades.keySet()) {
-                            if (otherFase != fase && phaseSchedule[lesson][day] != null) {
-                                canAllocate = false;
-                                break;
+                            if (otherFase != fase) {
+                                Discipline[][] otherPhaseSchedule = grades.get(otherFase);
+                                Discipline otherDiscipline = otherPhaseSchedule[lesson][day];
+                                if (otherDiscipline != null && otherDiscipline.getProfessorCode().equals(discipline.getProfessorCode())) {
+                                    professorAvailable = false;
+                                    break;
+                                }
                             }
                         }
-                        if (canAllocate) {
-                            phaseSchedule[lesson][day] = discipline;
-                            allocated = true;
-                            break;
+                        if (professorAvailable) {
+                            int availablePositions = Math.min(remainingCredits / 2, 2);
+                            for (int i = 0; i < availablePositions; i++) {
+                                if (lesson + i < 2) {
+                                    phaseSchedule[lesson + i][day] = discipline;
+                                    remainingCredits -= 2;
+                                    if (remainingCredits == 0) {
+                                        allocated = true;
+                                        break;
+                                    }
+                                }
+                            }
                         }
+                    }
+                    if (allocated) {
+                        break;
                     }
                 }
                 if (allocated) {
@@ -104,13 +121,25 @@ public class GridGenetorService {
                 }
             }
 
-
-
+            for (int faseteste : grades.keySet()) {
+                System.out.println("Fase " + faseteste + ":");
+                Discipline[][] phaseScheduleteste = grades.get(faseteste);
+                for (int dayteste = 0; dayteste < 6; dayteste++) {
+                    for (int lessonteste = 0; lessonteste < 2; lessonteste++) {
+                        Discipline disciplineteste = phaseScheduleteste[lessonteste][dayteste];
+                        if (disciplineteste != null) {
+                            System.out.println("Dia " + dayteste + ", Horário " + lessonteste + ": " + disciplineteste.getDisciplineCode());
+                        }
+                    }
+                }
+                System.out.println();
             }
 
 
 
-        return grades;
+            //return grades;
+        }
     }
+
 }
 
