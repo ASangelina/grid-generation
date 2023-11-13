@@ -2,6 +2,7 @@ package br.udesc;
 
 import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
+import br.udesc.services.GridGeneratorFull;
 import br.udesc.services.GridGeneratorSimple;
 import com.alibaba.fastjson.JSON;
 import io.javalin.Javalin;
@@ -19,7 +20,8 @@ public class Main {
                 .start(8080);
 
         //var service = new GridGenetorService();
-        var service = new GridGeneratorSimple();
+        //var service = new GridGeneratorSimple();
+        var service = new GridGeneratorFull();
 
         app.get("/generator", new VueComponent("generator-page"));
 
