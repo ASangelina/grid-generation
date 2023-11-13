@@ -2,7 +2,7 @@ discipline_code; description; professor_code; work_hours; credits; class_restric
 15ARC; Arquitetura de Computadores;1033292446; 72; 4; 0; 0  
 15CEX; Comunicação e Expressão; 1033195192; 36; 2; 0; 2
 15FAD; Fundamentos de Administração; 1033132265; 36; 2; 0; 2
-15FES; Fundamentos de Engenharia de Software; 3814432; 36; 2
+15FES; Fundamentos de Engenharia de Software; 3814432; 36; 0; 1
 15INP; Introdução à Programação; 3433579; 108; 6 ; 0; 0
 15MAD; Matemática Discreta; 3868214; 72; 4; 2; 0
 25ALG; Álgebra Linear; 3868214; 72; 4; 1; 0
@@ -39,7 +39,7 @@ discipline_code; description; professor_code; work_hours; credits; class_restric
 75ARS; Arquitetura de Software; 3381501; 36; 2; 0; 1
 75DJO; Desenvolvimento de Jogos; 6515711; 72; 4; 2; 0
 75GCF; Gerência de Configuração; 1033168052; 36; 2 ; 0; 0
-75GRP2; Gerenciamento de Projetos II; 3814432; 72; 4; 22; 0
+75GRP2; Gerenciamento de Projetos II; 3814432; 72; 4; 2; 0
 75INC; Inteligência Computacional; 6611893; 72; 4; 1; 0
 75QUA; Qualidade de Software; 3814432; 36; 2; 0; 2
 75TCC1; Orientação para Trabalho de Conclusão de Curso; 3381501; 36; 2; 0; 2
