@@ -2,13 +2,12 @@ Fase 1:
 Dia 1, Aula 1: 15ARC, Professor : 1033292446, Créditos : 4
 Dia 2, Aula 1: 15CEX, Professor : 1033195192, Créditos : 2
 Dia 3, Aula 1: 15MAD, Professor : 3868214, Créditos : 4
-Dia 4, Aula 1: 15FAD, Professor : 1033132265, Créditos : 2
+Dia 4, Aula 1: 15FES, Professor : 3814432, Créditos : 2
 Dia 5, Aula 1: 15INP, Professor : 3433579, Créditos : 6
-Dia 6, Aula 1: 15INP, Professor : 3433579, Créditos : 6
 Dia 1, Aula 2: 15ARC, Professor : 1033292446, Créditos : 4
 Dia 2, Aula 2: 15MAD, Professor : 3868214, Créditos : 4
-Dia 3, Aula 2: 15MPC, Professor : 1033195192, Créditos : 2
-Dia 4, Aula 2: 15FES, Professor : 3814432, Créditos : 2
+Dia 3, Aula 2: 15FAD, Professor : 1033132265, Créditos : 2
+Dia 4, Aula 2: 15INP, Professor : 3433579, Créditos : 6
 Dia 5, Aula 2: 15INP, Professor : 3433579, Créditos : 6
 Fase 2:
 Dia 1, Aula 1: 25GRH, Professor : 1033178279, Créditos : 2
@@ -24,23 +23,25 @@ Dia 5, Aula 2: 25PRS, Professor : 1033194876, Créditos : 2
 Fase 3:
 Dia 1, Aula 1: 35CDI, Professor : 3868214, Créditos : 6
 Dia 2, Aula 1: 35CDI, Professor : 3868214, Créditos : 6
-Dia 3, Aula 1: 35BAD, Professor : 1033211074, Créditos : 4
+Dia 3, Aula 1: 35REQ, Professor : 1033194876, Créditos : 2
 Dia 4, Aula 1: 35PRO2, Professor : 1033203127, Créditos : 4
+Dia 5, Aula 1: 35BAD, Professor : 1033211074, Créditos : 4
 Dia 1, Aula 2: 35CDI, Professor : 3868214, Créditos : 6
-Dia 2, Aula 2: 35REQ, Professor : 1033194876, Créditos : 2
-Dia 3, Aula 2: 35BAD, Professor : 1033211074, Créditos : 4
-Dia 4, Aula 2: 35FCO, Professor : 1033257848, Créditos : 2
+Dia 2, Aula 2: 35MPC, Professor : 1033195192, Créditos : 2
+Dia 3, Aula 2: 35PRO2, Professor : 1033203127, Créditos : 4
+Dia 4, Aula 2: 35BAD, Professor : 1033211074, Créditos : 4
+Dia 5, Aula 2: 35FCO, Professor : 1033257848, Créditos : 2
 Fase 4:
 Dia 1, Aula 1: 45EMP, Professor : 1033132265, Créditos : 4
 Dia 2, Aula 1: 45EST, Professor : 3433579, Créditos : 4
-Dia 3, Aula 1: 45PIN1, Professor : 6515711, Créditos : 4
-Dia 4, Aula 1: 45PBD, Professor : 1033211074, Créditos : 4
-Dia 5, Aula 1: 45PRJ, Professor : 1033211074, Créditos : 4
+Dia 3, Aula 1: 45PBD, Professor : 1033211074, Créditos : 4
+Dia 4, Aula 1: 45PRJ, Professor : 1033211074, Créditos : 4
+Dia 5, Aula 1: 45PIN1, Professor : 6515711, Créditos : 4
 Dia 1, Aula 2: 45EMP, Professor : 1033132265, Créditos : 4
 Dia 2, Aula 2: 45EST, Professor : 3433579, Créditos : 4
-Dia 3, Aula 2: 45PIN1, Professor : 6515711, Créditos : 4
-Dia 4, Aula 2: 45PBD, Professor : 1033211074, Créditos : 4
-Dia 5, Aula 2: 45PRJ, Professor : 1033211074, Créditos : 4
+Dia 3, Aula 2: 45PBD, Professor : 1033211074, Créditos : 4
+Dia 4, Aula 2: 45PRJ, Professor : 1033211074, Créditos : 4
+Dia 5, Aula 2: 45PIN1, Professor : 6515711, Créditos : 4
 Fase 5:
 Dia 1, Aula 1: 55PIN2, Professor : 3433579, Créditos : 4
 Dia 2, Aula 1: 55EQU, Professor : 1033132265, Créditos : 2
@@ -54,30 +55,30 @@ Dia 3, Aula 2: 55MQU, Professor : 512010901, Créditos : 4
 Dia 4, Aula 2: 55PPR, Professor : 6515711, Créditos : 4
 Dia 5, Aula 2: 55DSW, Professor : 1033140252, Créditos : 6
 Fase 6:
-Dia 1, Aula 1: 65PIN3, Professor : 512010901, Créditos : 4
-Dia 2, Aula 1: 65EEO, Professor : 3814432, Créditos : 2
-Dia 3, Aula 1: 65TES, Professor : 1033194876, Créditos : 4
-Dia 4, Aula 1: 65DSD, Professor : 6611893, Créditos : 6
+Dia 1, Aula 1: 65EEO, Professor : 3814432, Créditos : 2
+Dia 2, Aula 1: 65PIN3, Professor : 512010901, Créditos : 4
+Dia 3, Aula 1: 65DSD, Professor : 6611893, Créditos : 6
+Dia 4, Aula 1: 65TES, Professor : 1033194876, Créditos : 4
 Dia 5, Aula 1: 65DDM, Professor : 1033203127, Créditos : 4
-Dia 1, Aula 2: 65PIN3, Professor : 512010901, Créditos : 4
-Dia 2, Aula 2: 65GRP1, Professor : 3814432, Créditos : 2
-Dia 3, Aula 2: 65TES, Professor : 1033194876, Créditos : 4
-Dia 4, Aula 2: 65DSD, Professor : 6611893, Créditos : 6
+Dia 1, Aula 2: 65GRP1, Professor : 3814432, Créditos : 2
+Dia 2, Aula 2: 65PIN3, Professor : 512010901, Créditos : 4
+Dia 3, Aula 2: 65DSD, Professor : 6611893, Créditos : 6
+Dia 4, Aula 2: 65DDM, Professor : 1033203127, Créditos : 4
 Dia 5, Aula 2: 65DSD, Professor : 6611893, Créditos : 6
 Fase 7:
-Dia 1, Aula 1: 75GRP2, Professor : 3814432, Créditos : 4
-Dia 2, Aula 1: 75GCF, Professor : 1033168052, Créditos : 2
+Dia 1, Aula 1: 75GCF, Professor : 1033168052, Créditos : 2
+Dia 2, Aula 1: 75GRP2, Professor : 3814432, Créditos : 4
 Dia 3, Aula 1: 75QUA, Professor : 3814432, Créditos : 2
-Dia 4, Aula 1: 75ARS, Professor : 3381501, Créditos : 2
-Dia 5, Aula 1: 75DJO, Professor : 6515711, Créditos : 4
-Dia 6, Aula 1: 75INC, Professor : 6611893, Créditos : 4
-Dia 1, Aula 2: 75GRP2, Professor : 3814432, Créditos : 4
-Dia 2, Aula 2: 75DJO, Professor : 6515711, Créditos : 4
-Dia 3, Aula 2: 75INC, Professor : 6611893, Créditos : 4
-Dia 4, Aula 2: 75TCC1, Professor : 3381501, Créditos : 2
+Dia 4, Aula 1: 75INC, Professor : 6611893, Créditos : 4
+Dia 5, Aula 1: 75ARS, Professor : 3381501, Créditos : 2
+Dia 1, Aula 2: 75DJO, Professor : 6515711, Créditos : 4
+Dia 2, Aula 2: 75GRP2, Professor : 3814432, Créditos : 4
+Dia 3, Aula 2: 75DJO, Professor : 6515711, Créditos : 4
+Dia 4, Aula 2: 75INC, Professor : 6611893, Créditos : 4
+Dia 5, Aula 2: 75TCC1, Professor : 3381501, Créditos : 2
 Fase 8:
-Dia 1, Aula 1: 85MAN, Professor : 1033168052, Créditos : 2
-Dia 2, Aula 1: 85MEF, Professor : 1033194876, Créditos : 4
+Dia 1, Aula 1: 85MEF, Professor : 1033194876, Créditos : 4
+Dia 2, Aula 1: 85MAN, Professor : 1033168052, Créditos : 2
 Dia 3, Aula 1: 85MPS, Professor : 1033168052, Créditos : 2
 Dia 4, Aula 1: 85EEC, Professor : 1033185747, Créditos : 4
 Dia 5, Aula 1: 85EAG, Professor : 6611893, Créditos : 4

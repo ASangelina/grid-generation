@@ -48,7 +48,7 @@
     "class_restriction": 0,
     "time_restriction": 2
   },{
-    "discipline_code": "15MPC",
+    "discipline_code": "35MPC",
     "description": "Metodologia da Pesquisa Científica",
     "professor_code": "1033195192",
     "work_hours": 36,
@@ -587,8 +587,8 @@
     "time_restriction": 0
   }
 			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca", "quarta", "quinta", "sabado"]
+      "mandatory_days": ["segunda", "terca", "quarta", "quinta", "sabado"],
+      "preference_days": []
 	}
 	]
 }
