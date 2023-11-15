@@ -1,18 +1,32 @@
 package br.udesc.entities;
 
+import br.udesc.entities.exceptions.InvalidArgumentException;
+import com.alibaba.fastjson.annotation.JSONCreator;
+import com.alibaba.fastjson.annotation.JSONField;
+
 public enum TimeRestriction {
 
-    NONE(0),
-    START(1),
-    END(2);
+    NONE("NENHUMA"),
+    START("INICIO"),
+    END("FIM");
 
-    private final int value;
+    private final String timeRestriction;
 
-    TimeRestriction(int value) {
-        this.value = value;
+    TimeRestriction(String timeRestriction) {
+        this.timeRestriction = timeRestriction;
     }
 
-    public int getValue() {
-        return value;
+    @JSONField
+    public String getTimeRestriction() {
+        return timeRestriction;
+    }
+
+    @JSONCreator
+    public TimeRestriction from(String value) {
+        for (TimeRestriction restriction : values()) {
+            if (restriction.getTimeRestriction().equals(value))
+                return restriction;
+        }
+        throw new InvalidArgumentException("Invalid time restriction: " + value);
     }
 }

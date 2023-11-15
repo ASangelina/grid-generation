@@ -16,18 +16,18 @@ public class TimeServiceTest extends TestCase {
         disciplinesL.add("15ARC");
         disciplinesL.add("25SIS");
         disciplinesL.add("55RED");
-        List<Weekdays> diasDaSemanaRestrito = new ArrayList<>();
-        List<Weekdays> diasDaSemanaPreferencial = new ArrayList<>();
-        diasDaSemanaRestrito.add(Weekdays.MONDAY);
-        diasDaSemanaRestrito.add(Weekdays.FRIDAY);
+        List<Weekday> diasDaSemanaRestrito = new ArrayList<>();
+        List<Weekday> diasDaSemanaPreferencial = new ArrayList<>();
+        diasDaSemanaRestrito.add(Weekday.MONDAY);
+        diasDaSemanaRestrito.add(Weekday.FRIDAY);
 
         //sheila
         List<String> disciplinesS = new ArrayList<>();
         disciplinesS.add("15CEX");
         disciplinesS.add("35MPC");
-        List<Weekdays> diasDaSemanaRestritoS = new ArrayList<>();
-        List<Weekdays> diasDaSemanaPreferencialS = new ArrayList<>();
-        diasDaSemanaRestritoS.add(Weekdays.FRIDAY);
+        List<Weekday> diasDaSemanaRestritoS = new ArrayList<>();
+        List<Weekday> diasDaSemanaPreferencialS = new ArrayList<>();
+        diasDaSemanaRestritoS.add(Weekday.FRIDAY);
 
         //cruz
         List<String> disciplinesC = new ArrayList<>();
@@ -35,11 +35,11 @@ public class TimeServiceTest extends TestCase {
         disciplinesC.add("45EMP");
         disciplinesC.add("55EQU");
         disciplinesC.add("85MKT");
-        List<Weekdays> diasDaSemanaRestritoC = new ArrayList<>();
-        List<Weekdays> diasDaSemanaPreferencialC = new ArrayList<>();
-        diasDaSemanaRestritoC.add(Weekdays.WEDNESDAY);
-        diasDaSemanaRestritoC.add(Weekdays.FRIDAY);
-        diasDaSemanaRestritoC.add(Weekdays.SATURDAY);
+        List<Weekday> diasDaSemanaRestritoC = new ArrayList<>();
+        List<Weekday> diasDaSemanaPreferencialC = new ArrayList<>();
+        diasDaSemanaRestritoC.add(Weekday.WEDNESDAY);
+        diasDaSemanaRestritoC.add(Weekday.FRIDAY);
+        diasDaSemanaRestritoC.add(Weekday.SATURDAY);
 
 
         Professor professorLeandro = new Professor("1033292446", "LEANDRO LOFF", null, diasDaSemanaPreferencial,diasDaSemanaRestrito);

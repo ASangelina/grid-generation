@@ -29,7 +29,7 @@ public class TimeService {
     }
 
     private int countMandatoryRestrictionsForProfessor(Professor professor) {
-        List<Weekdays> mandatoryDays = professor.getMandatoryDays();
+        List<Weekday> mandatoryDays = professor.getMandatoryDays();
         if (mandatoryDays != null) {
             return mandatoryDays.size();
         }

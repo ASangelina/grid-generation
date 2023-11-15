@@ -1,18 +1,32 @@
 package br.udesc.entities;
 
+import br.udesc.entities.exceptions.InvalidArgumentException;
+import com.alibaba.fastjson.annotation.JSONCreator;
+import com.alibaba.fastjson.annotation.JSONField;
+
 public enum ClassRestriction {
 
-    NONE(0),
-    TOGETHER(1),
-    SEPARATE(2);
+    NONE("NENHUMA"),
+    TOGETHER( "JUNTAS"),
+    SEPARATE("SEPARADAS");
 
-    private final int value;
+    private final String classRestriction;
 
-    ClassRestriction(int value) {
-        this.value = value;
+    ClassRestriction(String classRestriction) {
+        this.classRestriction = classRestriction;
     }
 
-    public int getValue() {
-        return value;
+    @JSONField
+    public String getClassRestriction() {
+        return classRestriction;
+    }
+
+    @JSONCreator
+    public static ClassRestriction from(String value) {
+        for (ClassRestriction classRestriction : values()) {
+            if (classRestriction.getClassRestriction().equals(value))
+                return classRestriction;
+        }
+        throw new InvalidArgumentException("Invalid class restriction: " + value);
     }
 }

@@ -115,7 +115,11 @@
                     }
                 });
 
-                console.log(JSON.stringify(professorArray));
+                const professors = {
+                    professors: professorArray
+                }
+
+                console.log(JSON.stringify(professors));
                 //TODO: enviar JSON para backend e mostrar resultado na página
             },
             async getProfessorArray() {

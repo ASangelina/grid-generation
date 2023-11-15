@@ -16,12 +16,12 @@ public class Professor {
     private List<Discipline> disciplines;
 
     @JSONField(name = "preference_days")
-    private List<Weekdays> preferenceDays;
+    private List<Weekday> preferenceDays;
 
     @JSONField(name = "mandatory_days")
-    private List<Weekdays> mandatoryDays;
+    private List<Weekday> mandatoryDays;
 
-    public Professor(String code, String name, List<Discipline> disciplines, List<Weekdays> preferenceDays, List<Weekdays> mandatoryDays) {
+    public Professor(String code, String name, List<Discipline> disciplines, List<Weekday> preferenceDays, List<Weekday> mandatoryDays) {
         this.code = code;
         this.name = name;
         this.disciplines = disciplines;
@@ -53,19 +53,19 @@ public class Professor {
         this.disciplines = disciplines;
     }
 
-    public List<Weekdays> getPreferenceDays() {
+    public List<Weekday> getPreferenceDays() {
         return preferenceDays;
     }
 
-    public void setPreferenceDays(List<Weekdays> preferenceDays) {
+    public void setPreferenceDays(List<Weekday> preferenceDays) {
         this.preferenceDays = preferenceDays;
     }
 
-    public List<Weekdays> getMandatoryDays() {
+    public List<Weekday> getMandatoryDays() {
         return mandatoryDays;
     }
 
-    public void setMandatoryDays(List<Weekdays> mandatoryDays) {
+    public void setMandatoryDays(List<Weekday> mandatoryDays) {
         this.mandatoryDays = mandatoryDays;
     }
 }
