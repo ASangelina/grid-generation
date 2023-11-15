@@ -4,6 +4,7 @@ import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
 import br.udesc.services.GridGeneratorService;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import io.javalin.json.JsonMapper;
@@ -30,6 +31,10 @@ public class Main {
             Transaction transaction = ctx.bodyAsClass(Transaction.class);
 
             service.buildSchedule(transaction);
+
+            JSONObject response = new JSONObject();
+            response.put("message", "success while generating grid");
+            ctx.json(response);
         });
     }
 

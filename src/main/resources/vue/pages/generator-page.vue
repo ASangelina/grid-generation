@@ -69,6 +69,10 @@
                         <div id="result" class="column">
                             <div class="box">
                                 <h2 class="title">Resultado</h2>
+                                <!-- TODO: montar grid de resultado -->
+                                <div v-if="result">
+                                    {{ result.message }}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -84,7 +88,8 @@
         data() {
             return {
                 professor: {},
-                disciplines: {}
+                disciplines: {},
+                result: null
             };
         },
         methods: {
@@ -115,12 +120,32 @@
                     }
                 });
 
-                const professors = {
+                const payload = {
                     professors: professorArray
                 }
 
-                console.log(JSON.stringify(professors));
-                //TODO: enviar JSON para backend e mostrar resultado na página
+                this.sendRequestToGeneratorAPI(payload);
+            },
+            async sendRequestToGeneratorAPI(payload) {
+                try {
+                    const response = await fetch('/api/grid-generator', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload),
+                    });
+
+                    if (!response.ok) {
+                        //TODO: mostrar um pop up com erro para o user
+                        throw new Error('Erro na requisição para a API');
+                    }
+
+                    this.result = await response.json();
+                } catch (error) {
+                    console.error('Erro durante a requisição para a API:', error);
+                    //TODO: mostrar um erro para o user ou redirecionar para uma página de erro
+                }
             },
             async getProfessorArray() {
                 try {
