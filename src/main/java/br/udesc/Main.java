@@ -1,5 +1,6 @@
 package br.udesc;
 
+import br.udesc.entities.Discipline;
 import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
 import br.udesc.services.GridGeneratorService;
@@ -12,6 +13,7 @@ import io.javalin.vue.VueComponent;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Type;
+import java.util.Map;
 
 @SuppressWarnings({"resource"})
 public class Main {
@@ -30,11 +32,11 @@ public class Main {
             Log.info("Receiving generator grid request...", Main.class);
             Transaction transaction = ctx.bodyAsClass(Transaction.class);
 
-            service.buildSchedule(transaction);
+            Map<Integer, Discipline[][]> grades = service.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
             response.put("message", "success while generating grid");
-            ctx.json(response);
+            ctx.json(grades);
         });
     }
 

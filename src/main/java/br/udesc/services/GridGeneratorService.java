@@ -134,7 +134,7 @@ public class GridGeneratorService {
         return true;
     }
 
-    public void buildSchedule(Transaction transaction) {
+    public Map<Integer, Discipline[][]> buildSchedule(Transaction transaction) {
         Map<Integer, Discipline[][]> grades = new HashMap<>();
 
         List<Professor> professorList = transaction.getProfessorList();
@@ -142,7 +142,7 @@ public class GridGeneratorService {
         Professor professorInicial = selectProfessor(professorList);
         List<Discipline> disciplineList = professorInicial.getDisciplines().stream()
                 .sorted(Comparator.comparingInt(Discipline::getCredits).reversed())
-                .collect(Collectors.toList());
+                .toList();
         for (Discipline discipline : disciplineList) {
             allocateDiscipline(discipline, grades);
 
@@ -168,6 +168,7 @@ public class GridGeneratorService {
                 }
             }
         }
+        return grades;
     }
 
 }
