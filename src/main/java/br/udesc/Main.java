@@ -1,6 +1,5 @@
 package br.udesc;
 
-import br.udesc.entities.Discipline;
 import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
 import br.udesc.result.ResultGrid;
@@ -37,8 +36,9 @@ public class Main {
             ResultGrid resultGrid = serviceGenerator.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
-            response.put("message", "success while generating grid");
-            ctx.json(resultGrid);
+            response.put("disciplines:",resultGrid.getDisciplineSchedules());
+            response.put("professors:",resultGrid.getProfessorSchedules());
+            ctx.json(response);
         });
 
         app.post("/api/grid-generator/restrict", ctx -> {
@@ -48,8 +48,9 @@ public class Main {
             ResultGrid resultGrid = serviceRestrict.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
-            response.put("message", "success while generating grid");
-            ctx.json(resultGrid);
+            response.put("disciplines:",resultGrid.getDisciplineSchedules());
+            response.put("professors:",resultGrid.getProfessorSchedules());
+            ctx.json(response);
         });
     }
 
