@@ -3,12 +3,14 @@ package br.udesc.services;
 import br.udesc.entities.Discipline;
 import br.udesc.entities.Professor;
 import br.udesc.entities.Transaction;
+import br.udesc.entities.Weekday;
 import br.udesc.result.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
-public class GridGeneratorService {
+public class GridRestrict {
     private String lessonToTime(int lesson) {
         switch (lesson) {
             case 0:
@@ -38,21 +40,6 @@ public class GridGeneratorService {
         }
     }
 
-    public Professor selectProfessor(List<Professor> professorList) {
-        int maxCredits = 0;
-        Professor professorWithMaxCredits = null;
-
-        for (Professor professor : professorList) {
-            int credits = professor.getDisciplines().stream().mapToInt(Discipline::getCredits).sum();
-
-            if (credits > maxCredits) {
-                maxCredits = credits;
-                professorWithMaxCredits = professor;
-            }
-        }
-        return professorWithMaxCredits;
-
-    }
 
     public int extractFase(String input) {
         char firstDigit = input.replaceAll("\\D", "").charAt(0);
@@ -82,7 +69,6 @@ public class GridGeneratorService {
     }
 
 
-
     private void allocateDisciplines(Professor professor, Map<Integer, Discipline[][]> grades) {
 
         Integer mostCompletePhase = getMostCompletePhase(grades);
@@ -101,16 +87,16 @@ public class GridGeneratorService {
 
         // Allocate disciplines in the most complete phase first
         for (Discipline discipline : mostCompletePhaseDisciplines) {
-            allocateDiscipline(discipline, grades);
+            allocateDiscipline(professor,discipline, grades);
         }
 
         // Then allocate the remaining disciplines
         for (Discipline discipline : otherDisciplines) {
-            allocateDiscipline(discipline, grades);
+            allocateDiscipline(professor,discipline, grades);
         }
     }
 
-    private void allocateDiscipline(Discipline discipline, Map<Integer, Discipline[][]> grades) {
+    private void allocateDiscipline(Professor professor,Discipline discipline, Map<Integer, Discipline[][]> grades) {
         int fase = extractFase(discipline.getDisciplineCode());
         if (!grades.containsKey(fase)) {
             grades.put(fase, new Discipline[2][6]);
@@ -118,13 +104,13 @@ public class GridGeneratorService {
         Discipline[][] phaseSchedule = grades.get(fase);
 
 
-
         boolean allocated = false;
         int remainingCredits = discipline.getCredits();
+
         for (int day = 0; day < 6; day++) {
             for (int lesson = 0; lesson < 2; lesson++) {
                 if (phaseSchedule[lesson][day] == null) {
-                    boolean professorAvailable = isProfessorAvailable(discipline, grades, fase, lesson, day);
+                    boolean professorAvailable = isProfessorAvailable(professor,discipline, grades, fase, lesson, day);
                     if (professorAvailable) {
                         int availablePositions = day == 5 ? 1 : 2; // Se for sábado, aloca apenas na primeira posição
                         for (int i = 0; i < availablePositions; i++) {
@@ -149,7 +135,14 @@ public class GridGeneratorService {
         }
     }
 
-    private boolean isProfessorAvailable(Discipline discipline, Map<Integer, Discipline[][]> grades, int fase, int lesson, int day) {
+    private boolean isProfessorAvailable(Professor professor, Discipline discipline, Map<Integer, Discipline[][]> grades, int fase, int lesson, int day) {
+        for (Weekday restrictedDay : professor.getMandatoryDays()) {
+            int teste = restrictedDay.ordinal();
+            if (teste == day) {
+                return false;
+            }
+        }
+
         for (int otherFase : grades.keySet()) {
             if (otherFase != fase) {
                 Discipline[][] otherPhaseSchedule = grades.get(otherFase);
@@ -159,27 +152,40 @@ public class GridGeneratorService {
                 }
             }
         }
+
         return true;
     }
 
+
+
+
+
+
     public ResultGrid buildSchedule(Transaction transaction) {
         Map<Integer, Discipline[][]> grades = new HashMap<>();
-
         List<Professor> professorList = transaction.getProfessorList();
+        // professores restritos
+        List<Professor> professorsRestrict = professorList.stream()
+                .filter(professor -> professor.getMandatoryDays().size() > 0)
+                .sorted(Comparator.comparingInt(professor ->
+                        professor.getDisciplines().stream()
+                                .mapToInt(Discipline::getCredits)
+                                .sum()))
+                .collect(Collectors.toList());
 
-        Professor professorInicial = selectProfessor(professorList);
-        List<Discipline> disciplineList = professorInicial.getDisciplines().stream()
-                .sorted(Comparator.comparingInt(Discipline::getCredits).reversed()).toList();
-        for (Discipline discipline : disciplineList) {
-            allocateDiscipline(discipline, grades);
 
+        for(Professor professorRestrict: professorsRestrict){
+            for(Discipline d: professorRestrict.getDisciplines()){
+                allocateDiscipline(professorRestrict,d, grades);
+            }
         }
 
         for (Professor professor : professorList) {
-            if (professor != professorInicial) {
+            if (professor.getMandatoryDays().size() == 0) {
                 allocateDisciplines(professor, grades);
             }
         }
+
 
 
         ArrayList<ProfessorSchedule> professorSchedules = new ArrayList<>();
@@ -189,9 +195,9 @@ public class GridGeneratorService {
             for (Professor professor : professorList) {
                 Map<String, Day> professorMap = new HashMap<>();
                 for(Discipline disciplineProfessor:professor.getDisciplines()){
-                    for (int lesson = 0; lesson < 2; lesson++) {
-                        for (int day = 0; day < 6; day++) {
-                            Discipline discipline = phaseSchedule[lesson][day];
+                for (int lesson = 0; lesson < 2; lesson++) {
+                    for (int day = 0; day < 6; day++) {
+                        Discipline discipline = phaseSchedule[lesson][day];
                             if (discipline != null && discipline.getProfessorCode().equals(disciplineProfessor.getProfessorCode())) {
                                 Lesson lessonObj = new Lesson();
                                 lessonObj.setTime(lessonToTime(lesson));
@@ -250,4 +256,23 @@ public class GridGeneratorService {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

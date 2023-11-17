@@ -3,7 +3,9 @@ package br.udesc;
 import br.udesc.entities.Discipline;
 import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
+import br.udesc.result.ResultGrid;
 import br.udesc.services.GridGeneratorService;
+import br.udesc.services.GridRestrict;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import io.javalin.Javalin;
@@ -13,7 +15,6 @@ import io.javalin.vue.VueComponent;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Type;
-import java.util.Map;
 
 @SuppressWarnings({"resource"})
 public class Main {
@@ -24,7 +25,8 @@ public class Main {
             config.staticFiles.add("/public", Location.CLASSPATH);
         }).start(8080);
 
-        var service = new GridGeneratorService();
+        var serviceGenerator = new GridGeneratorService();
+        var serviceRestrict = new GridRestrict();
 
         app.get("/generator", new VueComponent("generator-page"));
 
@@ -32,11 +34,22 @@ public class Main {
             Log.info("Receiving generator grid request...", Main.class);
             Transaction transaction = ctx.bodyAsClass(Transaction.class);
 
-            Map<Integer, Discipline[][]> grades = service.buildSchedule(transaction);
+            ResultGrid resultGrid = serviceGenerator.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
             response.put("message", "success while generating grid");
-            ctx.json(grades);
+            ctx.json(resultGrid);
+        });
+
+        app.post("/api/grid-generator/restrict", ctx -> {
+            Log.info("Receiving generator grid request...", Main.class);
+            Transaction transaction = ctx.bodyAsClass(Transaction.class);
+
+            ResultGrid resultGrid = serviceRestrict.buildSchedule(transaction);
+
+            JSONObject response = new JSONObject();
+            response.put("message", "success while generating grid");
+            ctx.json(resultGrid);
         });
     }
 

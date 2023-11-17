@@ -1,594 +1,595 @@
 {
-  "professors": [
-    {
-      "code": "1033292446",
-      "name": "LEANDRO LOFF",
-      "disciplines": [
-				{
-    "discipline_code": "15ARC",
-    "description": "Arquitetura de Computadores",
-    "professor_code": "1033292446",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 0,
-    "time_restriction": 0
-  },
-				{
-    "discipline_code": "25SIS",
-    "description": "Sistemas Operacionais",
-    "professor_code": "1033292446",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },
-				{
-    "discipline_code": "55RED",
-    "description": "Redes de Computadores",
-    "professor_code": "1033292446",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 1
-  }
-			],
-      "mandatory_days": ["terca", "quarta", "quinta", "sabado"],
-      "preference_days": []
-    },
-    {
-      "code": "1033195192",
-      "name": "SCHEILA PATRICIA DE BORBA CURRY",
-      "disciplines": [
-				{
-    "discipline_code": "15CEX",
-    "description": "Comunicação e Expressão",
-    "professor_code": "1033195192",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },{
-    "discipline_code": "35MPC",
-    "description": "Metodologia da Pesquisa Científica",
-    "professor_code": "1033195192",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 1
-  }
-			],
-      "mandatory_days": ["segunda", "terca", "quarta", "quinta", "sabado"],
-      "preference_days": []
-    },
-    {
-      "code": "1033132265",
-      "name": "CARLOS FERNANDO CRUZ",
-      "disciplines": [
-				{
-    "discipline_code": "15FAD",
-    "description": "Fundamentos de Administração",
-    "professor_code": "1033132265",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },
-				{
-    "discipline_code": "45EMP",
-    "description": "Empreendedorismo",
-    "professor_code": "1033132265",
-   "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  },{
-    "discipline_code": "55EQU",
-    "description": "Engenharia da Qualidade",
-    "professor_code": "1033132265",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },{
-    "discipline_code": "85MKT",
-    "description": "Marketing",
-    "professor_code": "1033132265",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": ["segunda", "terca", "quinta"],
-      "preference_days": []
-    },
-    {
-      "code": "3814432",
-      "name": "PABLO SCHOEFFEL",
-      "disciplines": [
-				{
-    "discipline_code": "15FES",
-    "description": "Fundamentos de Engenharia de Software",
-    "professor_code": "3814432",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 1
-  },{
-    "discipline_code": "65EEO",
-    "description": "Estratégias de Experimentação e Observação",
-    "professor_code": "3814432",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 1
-  },{
-    "discipline_code": "65GRP1",
-    "description": "Gerenciamento de Projetos I",
-    "professor_code": "3814432",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },{
-    "discipline_code": "75GRP2",
-    "description": "Gerenciamento de Projetos II",
-    "professor_code": "3814432",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  },{
-    "discipline_code": "75QUA",
-    "description": "Qualidade de Software",
-    "professor_code": "3814432",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca", "quinta"]
-    },
-    {
-      "code": "3433579",
-      "name": "CARLOS ALBERTO BARTH",
-      "disciplines": [
-				{
-    "discipline_code": "15INP",
-    "description": "Introdução à Programação",
-    "professor_code": "3433579",
-    "work_hours": 108,
-    "credits": 6,
-    "class_restriction": 0,
-    "time_restriction": 0
-  }, {
-    "discipline_code": "45EST",
-    "description": " Algoritmos e Estrutura de Dados",
-    "professor_code": "3433579",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 0,
-    "time_restriction": 0
-  }, {
-    "discipline_code": "55PIN2",
-    "description": "Projeto Integrador II",
-    "professor_code": "3433579",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca", "quinta", "sabado"]
-    },
-    {
-      "code": "512010901",
-      "name": "MARCELO DE SOUZA",
-      "disciplines": [
-				{
-    "discipline_code": "55MQU",
-    "description": "Métodos Quantitativos",
-    "professor_code": "512010901",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  },
-		{
-    "discipline_code": "65PIN3",
-    "description": "Projeto Integrador III",
-    "professor_code": "512010901",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca", "quinta"]
-    },
-    {
-      "code": "3868214",
-      "name": "PAOLO MOSER",
-      "disciplines": [
-				{
-					"discipline_code": "15MAD",
-					"description": "Matemática Discreta",
-					"professor_code": "3868214",
-					"work_hours": 72,
-					"credits": 4,
-					"class_restriction": 0,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "25ALG",
-					"description": "Álgebra Linear",
-					"professor_code": "3868214",
-					"work_hours": 72,
-					"credits": 4,
-					"class_restriction": 2,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "25PRE",
-					"description": "Probabilidade e Estatística",
-					"professor_code": "3868214",
-					"work_hours": 72,
-					"credits": 4,
-					"class_restriction": 2,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "35CDI",
-					"description": "Cálculo Diferencial e Integral",
-					"professor_code": "3868214",
-					"work_hours": 108,
-					"credits": 6,
-					"class_restriction": 2,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "45LOG",
-					"description": "Lógica Matemática",
-					"professor_code": "3868214",
-					"work_hours": 36,
-					"credits": 2,
-					"class_restriction": 0,
-					"time_restriction": 1
-				}
-			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca", "quinta", "sexta", "sabado"]
-    },
-    {
-      "code": "1033178279",
-      "name": "VANIELE WEINRICH STUEPP",
-      "disciplines": [
-				{
-					"discipline_code": "25GRH",
-					"description": "Gestão de Recursos Humanos",
-					"professor_code": "1033178279",
-					"work_hours": 36,
-					"credits": 2,
-					"class_restriction": 0,
-					"time_restriction": 2
-				}
-			],
-      "mandatory_days": ["segunda", "terca", "quinta", "sexta", "sabado"],
-      "preference_days": []
-    },
-    {
-      "code": "1033168052",
-      "name": "PEDRO SIDNEI ZANCHETT",
-      "disciplines": [
-				{
-					"discipline_code": "25PRI",
-					"description": "Projeto de Interfaces",
-					"professor_code": "1033168052",
-					"work_hours": 36,
-					"credits": 2,
-					"class_restriction": 0,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "75GCF",
-					"description": "Gerência de Configuração",
-					"professor_code": "1033168052",
-					"work_hours": 36,
-					"credits": 2,
-					"class_restriction": 0,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "85MAN",
-					"description": "Manutenção de Software",
-					"professor_code": "1033168052",
-					"work_hours": 36,
-					"credits": 2,
-					"class_restriction": 0,
-					"time_restriction": 0
-				},
-				{
-					"discipline_code": "85MPS",
-					"description": "Melhoria de Processo de Software",
-					"professor_code": "1033168052",
-					"work_hours": 36,
-					"credits": 2,
-					"class_restriction": 0,
-					"time_restriction": 0
-				}
-			],
-      "mandatory_days": ["segunda", "terca", "quarta"],
-      "preference_days": []
-    },
-    {
-      "code": "1033203127",
-      "name": "MATTHEUS DA HORA FRANCA",
-      "disciplines": [
-				{
-    "discipline_code": "25PRO1",
-    "description": "Programação I",
-    "professor_code": "1033203127",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  },
-				 {
-    "discipline_code": "35PRO2",
-    "description": "Programação II",
-    "professor_code": "1033203127",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  },
-				 {
-    "discipline_code": "65DDM",
-    "description": "Desenvolvimento para Dispositivos Móveis",
-    "professor_code": "1033203127",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": ["quarta", "sexta", "sabado"],
-      "preference_days": []
-    },
-    {
-      "code": "1033194876",
-      "name": "MARILIA GUTERRES FERREIRA",
-      "disciplines": [
-				{
-    "discipline_code": "25PRS",
-    "description": "Processo de Software",
-    "professor_code": "1033194876",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },{
-    "discipline_code": "35REQ",
-    "description": "Engenharia de Requisitos",
-    "professor_code": "1033194876",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },
-		{
-    "discipline_code": "65TES",
-    "description": "Testes de Software",
-    "professor_code": "1033194876",
-   "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  },
-		{
-    "discipline_code": "85MEF",
-    "description": "Métodos Formais",
-    "professor_code": "1033194876",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  }
-		],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca", "quarta"]
-    },
-    {
-      "code": "1033211074",
-      "name": "RODRIGO RAMOS NOGUEIRA",
-      "disciplines": [
-				{
-    "discipline_code": "35BAD",
-    "description": "Modelagem de Banco de Dados",
-    "professor_code": "1033211074",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  },
-				{
-    "discipline_code": "45PBD",
-    "description": "Desenho e Projeto de Software",
-    "professor_code": "1033211074",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  },
-				{
-    "discipline_code": "45PRJ",
-    "description": "Persistência de Dados",
-    "professor_code": "1033211074",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": ["segunda", "sexta", "sabado"],
-      "preference_days": []
-    },
-    {
-      "code": "6515711",
-      "name": "ADILSON VAHLDICK",
-      "disciplines": [
-			{
-    "discipline_code": "45PIN1",
-    "description": "Projeto Integrador I",
-    "professor_code": "6515711",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  },
-		{
-    "discipline_code": "55PPR",
-    "description": "Padrões de Projeto",
-    "professor_code": "6515711",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  },{
-    "discipline_code": "75DJO",
-    "description": "Desenvolvimento de Jogos",
-    "professor_code": "6515711",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 2,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["quarta", "quinta", "sexta", "sabado"]
+	"professors": [
+	  {
+		"code": "1033292446",
+		"name": "LEANDRO LOFF",
+		"disciplines": [
+				  {
+	  "discipline_code": "15ARC",
+	  "description": "Arquitetura de Computadores",
+	  "professor_code": "1033292446",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 0,
+	  "time_restriction": 0
 	},
-	{
-      "code": "1033257848",
-      "name": "JESSICA GIOVANA NOLLI",
-      "disciplines": [
-				{
-    "discipline_code": "35FCO",
-    "description": "Fundamentos de Contabilidade",
-    "professor_code": "1033257848",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  },
-				{
-    "discipline_code": "85ECS17",
-    "description": "Ética Computador e Sociedade",
-    "professor_code": "1033257848",
-   	"work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["quarta", "sabado"]
+				  {
+	  "discipline_code": "25SIS",
+	  "description": "Sistemas Operacionais",
+	  "professor_code": "1033292446",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
 	},
-		{
-			"code": "1033140252",
-      "name": "PAULO ROBERTO FARAH",
-      "disciplines": [
-				{
-    "discipline_code": "55DSW",
-    "description": "Desenvolvimento de Sistemas para Web",
-    "professor_code": "1033140252",
-    "work_hours": 108,
-    "credits": 6,
-    "class_restriction": 0,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca"]
-	},
-
-			{"code": "6611893",
-      "name": "FERNANDO DOS SANTOS",
-      "disciplines": [
-				{
-    "discipline_code": "65DSD",
-    "description": "Desenvolvimento de Sistemas Paralelos e Distribuídos",
-    "professor_code": "6611893",
-    "work_hours": 108,
-    "credits": 6,
-    "class_restriction": 0,
-    "time_restriction": 0
-  },
-				{
-    "discipline_code": "75INC",
-    "description": "Inteligência Computacional",
-    "professor_code": "6611893",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  },
-				{
-    "discipline_code": "85EAG",
-    "description": "Engenharia de Software Orientada a Agentes",
-    "professor_code": "6611893",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["segunda", "terca","quinta", "sabado"]
-	},
-		{"code": "3381501",
-      "name": "GERALDO MENEGAZZO VARELA",
-      "disciplines": [
-				{
-    "discipline_code": "75ARS",
-    "description": "Arquitetura de Software",
-    "professor_code": "3381501",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 1
-  },
-				{
-    "discipline_code": "75TCC1",
-    "description": "Orientação para Trabalho de Conclusão de Curso",
-    "professor_code": "3381501",
-    "work_hours": 36,
-    "credits": 2,
-    "class_restriction": 0,
-    "time_restriction": 2
-  }
-			],
-      "mandatory_days": [],
-      "preference_days": ["quarta"]
-	},
-		{"code": "1033185747",
-      "name": "REGINALDO OTTO NAU",
-      "disciplines": [
-				{
-    "discipline_code": "85EEC",
-    "description": "Engenharia Econômica",
-    "professor_code": "1033185747",
-    "work_hours": 72,
-    "credits": 4,
-    "class_restriction": 1,
-    "time_restriction": 0
-  }
-			],
-      "mandatory_days": ["segunda", "terca", "quarta", "quinta", "sabado"],
-      "preference_days": []
+				  {
+	  "discipline_code": "55RED",
+	  "description": "Redes de Computadores",
+	  "professor_code": "1033292446",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 1
 	}
-	]
-}
+			  ],
+		"mandatory_days": ["QUARTA", "QUINTA", "SÁBADO"],
+		"preference_days": []
+	  },
+	  {
+		"code": "1033195192",
+		"name": "SCHEILA PATRICIA DE BORBA CURRY",
+		"disciplines": [
+				  {
+	  "discipline_code": "15CEX",
+	  "description": "Comunicação e Expressão",
+	  "professor_code": "1033195192",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},{
+	  "discipline_code": "35MPC",
+	  "description": "Metodologia da Pesquisa Científica",
+	  "professor_code": "1033195192",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 1
+	}
+			  ],
+		"mandatory_days": ["SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SÁBADO"],
+		"preference_days": []
+	  },
+	  {
+		"code": "1033132265",
+		"name": "CARLOS FERNANDO CRUZ",
+		"disciplines": [
+				  {
+	  "discipline_code": "15FAD",
+	  "description": "Fundamentos de Administração",
+	  "professor_code": "1033132265",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},
+				  {
+	  "discipline_code": "45EMP",
+	  "description": "Empreendedorismo",
+	  "professor_code": "1033132265",
+	 "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	},{
+	  "discipline_code": "55EQU",
+	  "description": "Engenharia da Qualidade",
+	  "professor_code": "1033132265",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},{
+	  "discipline_code": "85MKT",
+	  "description": "Marketing",
+	  "professor_code": "1033132265",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": ["SEGUNDA", "TERÇA", "QUINTA"],
+		"preference_days": []
+	  },
+	  {
+		"code": "3814432",
+		"name": "PABLO SCHOEFFEL",
+		"disciplines": [
+				  {
+	  "discipline_code": "15FES",
+	  "description": "Fundamentos de Engenharia de Software",
+	  "professor_code": "3814432",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 1
+	},{
+	  "discipline_code": "65EEO",
+	  "description": "Estratégias de Experimentação e Observação",
+	  "professor_code": "3814432",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 1
+	},{
+	  "discipline_code": "65GRP1",
+	  "description": "Gerenciamento de Projetos I",
+	  "professor_code": "3814432",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},{
+	  "discipline_code": "75GRP2",
+	  "description": "Gerenciamento de Projetos II",
+	  "professor_code": "3814432",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	},{
+	  "discipline_code": "75QUA",
+	  "description": "Qualidade de Software",
+	  "professor_code": "3814432",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA", "QUINTA"]
+	  },
+	  {
+		"code": "3433579",
+		"name": "CARLOS ALBERTO BARTH",
+		"disciplines": [
+				  {
+	  "discipline_code": "15INP",
+	  "description": "Introdução à Programação",
+	  "professor_code": "3433579",
+	  "work_hours": 108,
+	  "credits": 6,
+	  "class_restriction": 0,
+	  "time_restriction": 0
+	}, {
+	  "discipline_code": "45EST",
+	  "description": " Algoritmos e Estrutura de Dados",
+	  "professor_code": "3433579",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 0,
+	  "time_restriction": 0
+	}, {
+	  "discipline_code": "55PIN2",
+	  "description": "Projeto Integrador II",
+	  "professor_code": "3433579",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA", "QUINTA", "SÁBADO"]
+	  },
+	  {
+		"code": "512010901",
+		"name": "MARCELO DE SOUZA",
+		"disciplines": [
+				  {
+	  "discipline_code": "55MQU",
+	  "description": "Métodos Quantitativos",
+	  "professor_code": "512010901",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	},
+		  {
+	  "discipline_code": "65PIN3",
+	  "description": "Projeto Integrador III",
+	  "professor_code": "512010901",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA", "QUINTA"]
+	  },
+	  {
+		"code": "3868214",
+		"name": "PAOLO MOSER",
+		"disciplines": [
+				  {
+					  "discipline_code": "15MAD",
+					  "description": "Matemática Discreta",
+					  "professor_code": "3868214",
+					  "work_hours": 72,
+					  "credits": 4,
+					  "class_restriction": 0,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "25ALG",
+					  "description": "Álgebra Linear",
+					  "professor_code": "3868214",
+					  "work_hours": 72,
+					  "credits": 4,
+					  "class_restriction": 2,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "25PRE",
+					  "description": "Probabilidade e Estatística",
+					  "professor_code": "3868214",
+					  "work_hours": 72,
+					  "credits": 4,
+					  "class_restriction": 2,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "35CDI",
+					  "description": "Cálculo Diferencial e Integral",
+					  "professor_code": "3868214",
+					  "work_hours": 108,
+					  "credits": 6,
+					  "class_restriction": 2,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "45LOG",
+					  "description": "Lógica Matemática",
+					  "professor_code": "3868214",
+					  "work_hours": 36,
+					  "credits": 2,
+					  "class_restriction": 0,
+					  "time_restriction": 1
+				  }
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA", "QUINTA", "SEXTA", "SÁBADO"]
+	  },
+	  {
+		"code": "1033178279",
+		"name": "VANIELE WEINRICH STUEPP",
+		"disciplines": [
+				  {
+					  "discipline_code": "25GRH",
+					  "description": "Gestão de Recursos Humanos",
+					  "professor_code": "1033178279",
+					  "work_hours": 36,
+					  "credits": 2,
+					  "class_restriction": 0,
+					  "time_restriction": 2
+				  }
+			  ],
+		"mandatory_days": ["SEGUNDA", "TERÇA", "QUINTA", "SEXTA", "SÁBADO"],
+		"preference_days": []
+	  },
+	  {
+		"code": "1033168052",
+		"name": "PEDRO SIDNEI ZANCHETT",
+		"disciplines": [
+				  {
+					  "discipline_code": "25PRI",
+					  "description": "Projeto de Interfaces",
+					  "professor_code": "1033168052",
+					  "work_hours": 36,
+					  "credits": 2,
+					  "class_restriction": 0,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "75GCF",
+					  "description": "Gerência de Configuração",
+					  "professor_code": "1033168052",
+					  "work_hours": 36,
+					  "credits": 2,
+					  "class_restriction": 0,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "85MAN",
+					  "description": "Manutenção de Software",
+					  "professor_code": "1033168052",
+					  "work_hours": 36,
+					  "credits": 2,
+					  "class_restriction": 0,
+					  "time_restriction": 0
+				  },
+				  {
+					  "discipline_code": "85MPS",
+					  "description": "Melhoria de Processo de Software",
+					  "professor_code": "1033168052",
+					  "work_hours": 36,
+					  "credits": 2,
+					  "class_restriction": 0,
+					  "time_restriction": 0
+				  }
+			  ],
+		"mandatory_days": ["SEGUNDA", "TERÇA", "QUARTA"],
+		"preference_days": []
+	  },
+	  {
+		"code": "1033203127",
+		"name": "MATTHEUS DA HORA FRANCA",
+		"disciplines": [
+				  {
+	  "discipline_code": "25PRO1",
+	  "description": "Programação I",
+	  "professor_code": "1033203127",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	},
+				   {
+	  "discipline_code": "35PRO2",
+	  "description": "Programação II",
+	  "professor_code": "1033203127",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	},
+				   {
+	  "discipline_code": "65DDM",
+	  "description": "Desenvolvimento para Dispositivos Móveis",
+	  "professor_code": "1033203127",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": ["QUARTA", "SEXTA", "SÁBADO"],
+		"preference_days": []
+	  },
+	  {
+		"code": "1033194876",
+		"name": "MARILIA GUTERRES FERREIRA",
+		"disciplines": [
+				  {
+	  "discipline_code": "25PRS",
+	  "description": "Processo de Software",
+	  "professor_code": "1033194876",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},{
+	  "discipline_code": "35REQ",
+	  "description": "Engenharia de Requisitos",
+	  "professor_code": "1033194876",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},
+		  {
+	  "discipline_code": "65TES",
+	  "description": "Testes de Software",
+	  "professor_code": "1033194876",
+	 "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	},
+		  {
+	  "discipline_code": "85MEF",
+	  "description": "Métodos Formais",
+	  "professor_code": "1033194876",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	}
+		  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA", "QUARTA"]
+	  },
+	  {
+		"code": "1033211074",
+		"name": "RODRIGO RAMOS NOGUEIRA",
+		"disciplines": [
+				  {
+	  "discipline_code": "35BAD",
+	  "description": "Modelagem de Banco de Dados",
+	  "professor_code": "1033211074",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	},
+				  {
+	  "discipline_code": "45PBD",
+	  "description": "Desenho e Projeto de Software",
+	  "professor_code": "1033211074",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	},
+				  {
+	  "discipline_code": "45PRJ",
+	  "description": "Persistência de Dados",
+	  "professor_code": "1033211074",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": ["SEGUNDA", "SEXTA", "SÁBADO"],
+		"preference_days": []
+	  },
+	  {
+		"code": "6515711",
+		"name": "ADILSON VAHLDICK",
+		"disciplines": [
+			  {
+	  "discipline_code": "45PIN1",
+	  "description": "Projeto Integrador I",
+	  "professor_code": "6515711",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	},
+		  {
+	  "discipline_code": "55PPR",
+	  "description": "Padrões de Projeto",
+	  "professor_code": "6515711",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	},{
+	  "discipline_code": "75DJO",
+	  "description": "Desenvolvimento de Jogos",
+	  "professor_code": "6515711",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 2,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["QUARTA", "QUINTA", "SEXTA", "SÁBADO"]
+	  },
+	  {
+		"code": "1033257848",
+		"name": "JESSICA GIOVANA NOLLI",
+		"disciplines": [
+				  {
+	  "discipline_code": "35FCO",
+	  "description": "Fundamentos de Contabilidade",
+	  "professor_code": "1033257848",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	},
+				  {
+	  "discipline_code": "85ECS17",
+	  "description": "Ética Computador e Sociedade",
+	  "professor_code": "1033257848",
+		 "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["QUARTA", "SÁBADO"]
+	  },
+		  {
+			  "code": "1033140252",
+		"name": "PAULO ROBERTO FARAH",
+		"disciplines": [
+				  {
+	  "discipline_code": "55DSW",
+	  "description": "Desenvolvimento de Sistemas para Web",
+	  "professor_code": "1033140252",
+	  "work_hours": 108,
+	  "credits": 6,
+	  "class_restriction": 0,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA"]
+	  },
+
+			  {"code": "6611893",
+		"name": "FERNANDO DOS SANTOS",
+		"disciplines": [
+				  {
+	  "discipline_code": "65DSD",
+	  "description": "Desenvolvimento de Sistemas Paralelos e Distribuídos",
+	  "professor_code": "6611893",
+	  "work_hours": 108,
+	  "credits": 6,
+	  "class_restriction": 0,
+	  "time_restriction": 0
+	},
+				  {
+	  "discipline_code": "75INC",
+	  "description": "Inteligência Computacional",
+	  "professor_code": "6611893",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	},
+				  {
+	  "discipline_code": "85EAG",
+	  "description": "Engenharia de Software Orientada a Agentes",
+	  "professor_code": "6611893",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["SEGUNDA", "TERÇA","QUINTA", "SÁBADO"]
+	  },
+		  {"code": "3381501",
+		"name": "GERALDO MENEGAZZO VARELA",
+		"disciplines": [
+				  {
+	  "discipline_code": "75ARS",
+	  "description": "Arquitetura de Software",
+	  "professor_code": "3381501",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 1
+	},
+				  {
+	  "discipline_code": "75TCC1",
+	  "description": "Orientação para Trabalho de Conclusão de Curso",
+	  "professor_code": "3381501",
+	  "work_hours": 36,
+	  "credits": 2,
+	  "class_restriction": 0,
+	  "time_restriction": 2
+	}
+			  ],
+		"mandatory_days": [],
+		"preference_days": ["QUARTA"]
+	  },
+		  {"code": "1033185747",
+		"name": "REGINALDO OTTO NAU",
+		"disciplines": [
+				  {
+	  "discipline_code": "85EEC",
+	  "description": "Engenharia Econômica",
+	  "professor_code": "1033185747",
+	  "work_hours": 72,
+	  "credits": 4,
+	  "class_restriction": 1,
+	  "time_restriction": 0
+	}
+			  ],
+		"mandatory_days": ["SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SÁBADO"],
+		"preference_days": []
+	  }
+	  ]
+  }
+
