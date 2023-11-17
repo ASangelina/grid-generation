@@ -3,12 +3,39 @@ package br.udesc.services;
 import br.udesc.entities.Discipline;
 import br.udesc.entities.Professor;
 import br.udesc.entities.Transaction;
+import br.udesc.result.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
-
 
 public class GridGeneratorService {
+    private String lessonToTime(int lesson) {
+        switch (lesson) {
+            case 0:
+                return "Primeiro horário";
+            case 1:
+                return "Segundo horário";
+            default:
+                return "Horário inválido";
+        }
+    }
+    private String dayToDayOfWeek(int day) {
+        switch (day) {
+            case 0:
+                return "SEGUNDA";
+            case 1:
+                return "TERÇA";
+            case 2:
+                return "QUARTA";
+            case 3:
+                return "QUINTA";
+            case 4:
+                return "SEXTA";
+            case 5:
+                return "SÁBADO";
+            default:
+                return "Dia inválido";
+        }
+    }
 
     public Professor selectProfessor(List<Professor> professorList) {
         int maxCredits = 0;
@@ -134,15 +161,14 @@ public class GridGeneratorService {
         return true;
     }
 
-    public Map<Integer, Discipline[][]> buildSchedule(Transaction transaction) {
+    public ResultGrid buildSchedule(Transaction transaction) {
         Map<Integer, Discipline[][]> grades = new HashMap<>();
 
         List<Professor> professorList = transaction.getProfessorList();
 
         Professor professorInicial = selectProfessor(professorList);
         List<Discipline> disciplineList = professorInicial.getDisciplines().stream()
-                .sorted(Comparator.comparingInt(Discipline::getCredits).reversed())
-                .toList();
+                .sorted(Comparator.comparingInt(Discipline::getCredits).reversed()).toList();
         for (Discipline discipline : disciplineList) {
             allocateDiscipline(discipline, grades);
 
@@ -155,20 +181,71 @@ public class GridGeneratorService {
         }
 
 
+        ArrayList<ProfessorSchedule> professorSchedules = new ArrayList<>();
+
         for (Map.Entry<Integer, Discipline[][]> entry : grades.entrySet()) {
-            int fase = entry.getKey();
             Discipline[][] phaseSchedule = entry.getValue();
-            System.out.println("Fase " + fase + ":");
+            for (Professor professor : professorList) {
+                Map<String, Day> professorMap = new HashMap<>();
+                for(Discipline disciplineProfessor:professor.getDisciplines()){
+                    for (int lesson = 0; lesson < 2; lesson++) {
+                        for (int day = 0; day < 6; day++) {
+                            Discipline discipline = phaseSchedule[lesson][day];
+                            if (discipline != null && discipline.getProfessorCode().equals(disciplineProfessor.getProfessorCode())) {
+                                Lesson lessonObj = new Lesson();
+                                lessonObj.setTime(lessonToTime(lesson));
+                                lessonObj.setDiscipline(discipline.getDisciplineCode());
+
+                                Day dayObj = new Day();
+                                dayObj.setDayOfWeek(dayToDayOfWeek(day));
+                                dayObj.getLessons().put(lessonObj.getTime(), lessonObj);
+
+                                professorMap.put(dayObj.getDayOfWeek(), dayObj);
+                            }
+                        }
+
+                    }
+                }
+                ProfessorSchedule professorSchedule = new ProfessorSchedule();
+                professorSchedule.setProfessorName(professor.getName());
+                professorSchedule.setSchedule(professorMap);
+                professorSchedules.add(professorSchedule);
+            }
+        }
+
+        List<DisciplineSchedule> disciplineSchedules = new ArrayList<>();
+
+        for (Map.Entry<Integer, Discipline[][]> entry : grades.entrySet()) {
+            String phase = entry.getKey().toString();
+            Discipline[][] phaseSchedule = entry.getValue();
+            Map<String, Map<String, List<Map<String, String>>>> disciplineMap = new HashMap<>();
+
             for (int lesson = 0; lesson < 2; lesson++) {
                 for (int day = 0; day < 6; day++) {
-                    Discipline discipline = phaseSchedule[lesson][day];
-                    if (discipline != null) {
-                        System.out.println("Dia " + (day + 1) + ", Aula " + (lesson + 1) + ": " + discipline.getDisciplineCode() + ", Professor " + ": " + discipline.getProfessorCode() + ", Créditos " + ": " + discipline.getCredits());
+                    Discipline disciplineInSchedule = phaseSchedule[lesson][day];
+                    if (disciplineInSchedule != null) {
+                        String dayOfWeek = dayToDayOfWeek(day);
+                        String disciplineCode = disciplineInSchedule.getDisciplineCode();
+                        String time = lessonToTime(lesson);
+
+                        disciplineMap.computeIfAbsent(dayOfWeek, k -> new HashMap<>())
+                                .computeIfAbsent(disciplineCode, k -> new ArrayList<>())
+                                .add(Map.of("time", time));
                     }
                 }
             }
+
+            DisciplineSchedule disciplineSchedule = new DisciplineSchedule();
+            disciplineSchedule.setFase(phase);
+            disciplineSchedule.setSchedule(disciplineMap);
+            disciplineSchedules.add(disciplineSchedule);
         }
-        return grades;
+        ResultGrid resultGrid = new ResultGrid();
+        resultGrid.setDisciplineSchedules(disciplineSchedules);
+        resultGrid.setProfessorSchedules(professorSchedules);
+
+        return resultGrid;
+
     }
 
 }
