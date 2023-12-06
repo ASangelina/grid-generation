@@ -10,8 +10,8 @@
 	  "professor_code": "1033292446",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	},
 				  {
 	  "discipline_code": "25SIS",
@@ -19,8 +19,8 @@
 	  "professor_code": "1033292446",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},
 				  {
 	  "discipline_code": "55RED",
@@ -28,8 +28,8 @@
 	  "professor_code": "1033292446",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 1
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "INICIO"
 	}
 			  ],
 		"mandatory_days": ["QUARTA", "QUINTA", "SÁBADO"],
@@ -45,16 +45,16 @@
 	  "professor_code": "1033195192",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},{
 	  "discipline_code": "35MPC",
 	  "description": "Metodologia da Pesquisa Científica",
 	  "professor_code": "1033195192",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 1
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "INICIO"
 	}
 			  ],
 		"mandatory_days": ["SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SÁBADO"],
@@ -70,8 +70,8 @@
 	  "professor_code": "1033132265",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},
 				  {
 	  "discipline_code": "45EMP",
@@ -79,24 +79,24 @@
 	  "professor_code": "1033132265",
 	 "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	},{
 	  "discipline_code": "55EQU",
 	  "description": "Engenharia da Qualidade",
 	  "professor_code": "1033132265",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},{
 	  "discipline_code": "85MKT",
 	  "description": "Marketing",
 	  "professor_code": "1033132265",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": ["SEGUNDA", "TERÇA", "QUINTA"],
@@ -112,40 +112,40 @@
 	  "professor_code": "3814432",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 1
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},{
 	  "discipline_code": "65EEO",
 	  "description": "Estratégias de Experimentação e Observação",
 	  "professor_code": "3814432",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 1
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "INICIO"
 	},{
 	  "discipline_code": "65GRP1",
 	  "description": "Gerenciamento de Projetos I",
 	  "professor_code": "3814432",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},{
 	  "discipline_code": "75GRP2",
 	  "description": "Gerenciamento de Projetos II",
 	  "professor_code": "3814432",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	},{
 	  "discipline_code": "75QUA",
 	  "description": "Qualidade de Software",
 	  "professor_code": "3814432",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	}
 			  ],
 		"mandatory_days": [],
@@ -161,24 +161,24 @@
 	  "professor_code": "3433579",
 	  "work_hours": 108,
 	  "credits": 6,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	}, {
 	  "discipline_code": "45EST",
 	  "description": " Algoritmos e Estrutura de Dados",
 	  "professor_code": "3433579",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	}, {
 	  "discipline_code": "55PIN2",
 	  "description": "Projeto Integrador II",
 	  "professor_code": "3433579",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": [],
@@ -194,8 +194,8 @@
 	  "professor_code": "512010901",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	},
 		  {
 	  "discipline_code": "65PIN3",
@@ -203,8 +203,8 @@
 	  "professor_code": "512010901",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": [],
@@ -220,8 +220,8 @@
 					  "professor_code": "3868214",
 					  "work_hours": 72,
 					  "credits": 4,
-					  "class_restriction": 0,
-					  "time_restriction": 0
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "25ALG",
@@ -229,8 +229,8 @@
 					  "professor_code": "3868214",
 					  "work_hours": 72,
 					  "credits": 4,
-					  "class_restriction": 2,
-					  "time_restriction": 0
+					  "class_restriction": "SEPARADAS",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "25PRE",
@@ -238,8 +238,8 @@
 					  "professor_code": "3868214",
 					  "work_hours": 72,
 					  "credits": 4,
-					  "class_restriction": 2,
-					  "time_restriction": 0
+					  "class_restriction": "SEPARADAS",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "35CDI",
@@ -247,8 +247,8 @@
 					  "professor_code": "3868214",
 					  "work_hours": 108,
 					  "credits": 6,
-					  "class_restriction": 2,
-					  "time_restriction": 0
+					  "class_restriction": "SEPARADAS",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "45LOG",
@@ -256,8 +256,8 @@
 					  "professor_code": "3868214",
 					  "work_hours": 36,
 					  "credits": 2,
-					  "class_restriction": 0,
-					  "time_restriction": 1
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "INICIO"
 				  }
 			  ],
 		"mandatory_days": [],
@@ -273,8 +273,8 @@
 					  "professor_code": "1033178279",
 					  "work_hours": 36,
 					  "credits": 2,
-					  "class_restriction": 0,
-					  "time_restriction": 2
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "FIM"
 				  }
 			  ],
 		"mandatory_days": ["SEGUNDA", "TERÇA", "QUINTA", "SEXTA", "SÁBADO"],
@@ -290,8 +290,8 @@
 					  "professor_code": "1033168052",
 					  "work_hours": 36,
 					  "credits": 2,
-					  "class_restriction": 0,
-					  "time_restriction": 0
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "75GCF",
@@ -299,8 +299,8 @@
 					  "professor_code": "1033168052",
 					  "work_hours": 36,
 					  "credits": 2,
-					  "class_restriction": 0,
-					  "time_restriction": 0
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "85MAN",
@@ -308,8 +308,8 @@
 					  "professor_code": "1033168052",
 					  "work_hours": 36,
 					  "credits": 2,
-					  "class_restriction": 0,
-					  "time_restriction": 0
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "NENHUMA"
 				  },
 				  {
 					  "discipline_code": "85MPS",
@@ -317,8 +317,8 @@
 					  "professor_code": "1033168052",
 					  "work_hours": 36,
 					  "credits": 2,
-					  "class_restriction": 0,
-					  "time_restriction": 0
+					  "class_restriction": "NENHUMA",
+					  "time_restriction": "NENHUMA"
 				  }
 			  ],
 		"mandatory_days": ["SEGUNDA", "TERÇA", "QUARTA"],
@@ -334,8 +334,8 @@
 	  "professor_code": "1033203127",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	},
 				   {
 	  "discipline_code": "35PRO2",
@@ -343,8 +343,8 @@
 	  "professor_code": "1033203127",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	},
 				   {
 	  "discipline_code": "65DDM",
@@ -352,8 +352,8 @@
 	  "professor_code": "1033203127",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": ["QUARTA", "SEXTA", "SÁBADO"],
@@ -369,16 +369,16 @@
 	  "professor_code": "1033194876",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},{
 	  "discipline_code": "35REQ",
 	  "description": "Engenharia de Requisitos",
 	  "professor_code": "1033194876",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},
 		  {
 	  "discipline_code": "65TES",
@@ -386,8 +386,8 @@
 	  "professor_code": "1033194876",
 	 "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	},
 		  {
 	  "discipline_code": "85MEF",
@@ -395,8 +395,8 @@
 	  "professor_code": "1033194876",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	}
 		  ],
 		"mandatory_days": [],
@@ -412,8 +412,8 @@
 	  "professor_code": "1033211074",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	},
 				  {
 	  "discipline_code": "45PBD",
@@ -421,8 +421,8 @@
 	  "professor_code": "1033211074",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	},
 				  {
 	  "discipline_code": "45PRJ",
@@ -430,8 +430,8 @@
 	  "professor_code": "1033211074",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": ["SEGUNDA", "SEXTA", "SÁBADO"],
@@ -447,8 +447,8 @@
 	  "professor_code": "6515711",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	},
 		  {
 	  "discipline_code": "55PPR",
@@ -456,16 +456,16 @@
 	  "professor_code": "6515711",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	},{
 	  "discipline_code": "75DJO",
 	  "description": "Desenvolvimento de Jogos",
 	  "professor_code": "6515711",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 2,
-	  "time_restriction": 0
+	  "class_restriction": "SEPARADAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": [],
@@ -481,8 +481,8 @@
 	  "professor_code": "1033257848",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	},
 				  {
 	  "discipline_code": "85ECS17",
@@ -490,8 +490,8 @@
 	  "professor_code": "1033257848",
 		 "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": [],
@@ -507,8 +507,8 @@
 	  "professor_code": "1033140252",
 	  "work_hours": 108,
 	  "credits": 6,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": [],
@@ -524,8 +524,8 @@
 	  "professor_code": "6611893",
 	  "work_hours": 108,
 	  "credits": 6,
-	  "class_restriction": 0,
-	  "time_restriction": 0
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "NENHUMA"
 	},
 				  {
 	  "discipline_code": "75INC",
@@ -533,8 +533,8 @@
 	  "professor_code": "6611893",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	},
 				  {
 	  "discipline_code": "85EAG",
@@ -542,8 +542,8 @@
 	  "professor_code": "6611893",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": [],
@@ -558,8 +558,8 @@
 	  "professor_code": "3381501",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 1
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "INICIO"
 	},
 				  {
 	  "discipline_code": "75TCC1",
@@ -567,8 +567,8 @@
 	  "professor_code": "3381501",
 	  "work_hours": 36,
 	  "credits": 2,
-	  "class_restriction": 0,
-	  "time_restriction": 2
+	  "class_restriction": "NENHUMA",
+	  "time_restriction": "FIM"
 	}
 			  ],
 		"mandatory_days": [],
@@ -583,8 +583,8 @@
 	  "professor_code": "1033185747",
 	  "work_hours": 72,
 	  "credits": 4,
-	  "class_restriction": 1,
-	  "time_restriction": 0
+	  "class_restriction": "JUNTAS",
+	  "time_restriction": "NENHUMA"
 	}
 			  ],
 		"mandatory_days": ["SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SÁBADO"],

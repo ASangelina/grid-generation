@@ -5,6 +5,9 @@ import br.udesc.entities.Professor;
 import br.udesc.entities.Transaction;
 import br.udesc.entities.Weekday;
 import br.udesc.result.*;
+import resultado.DisciplinesItem;
+import resultado.ProfessorsItem;
+import resultado.Response;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -161,17 +164,18 @@ public class GridRestrict {
 
 
 
-    public ResultGrid buildSchedule(Transaction transaction) {
+    public Response buildSchedule(Transaction transaction) {
         Map<Integer, Discipline[][]> grades = new HashMap<>();
         List<Professor> professorList = transaction.getProfessorList();
         // professores restritos
         List<Professor> professorsRestrict = professorList.stream()
-                .filter(professor -> professor.getMandatoryDays().size() > 0)
+                .filter(professor -> professor.getMandatoryDays() != null)
                 .sorted(Comparator.comparingInt(professor ->
                         professor.getDisciplines().stream()
                                 .mapToInt(Discipline::getCredits)
                                 .sum()))
-                .collect(Collectors.toList());
+                .toList();
+
 
 
         for(Professor professorRestrict: professorsRestrict){
@@ -181,77 +185,60 @@ public class GridRestrict {
         }
 
         for (Professor professor : professorList) {
-            if (professor.getMandatoryDays().size() == 0) {
+            if (professor.getMandatoryDays().isEmpty()) {
                 allocateDisciplines(professor, grades);
             }
         }
 
+        ArrayList<DisciplinesItem> disciplinesItems = new ArrayList<>();
+        ArrayList<ProfessorsItem> professorsItems = new ArrayList<>();
 
 
-        ArrayList<ProfessorSchedule> professorSchedules = new ArrayList<>();
-
-        for (Map.Entry<Integer, Discipline[][]> entry : grades.entrySet()) {
-            Discipline[][] phaseSchedule = entry.getValue();
-            for (Professor professor : professorList) {
-                Map<String, Day> professorMap = new HashMap<>();
-                for(Discipline disciplineProfessor:professor.getDisciplines()){
-                for (int lesson = 0; lesson < 2; lesson++) {
-                    for (int day = 0; day < 6; day++) {
-                        Discipline discipline = phaseSchedule[lesson][day];
-                            if (discipline != null && discipline.getProfessorCode().equals(disciplineProfessor.getProfessorCode())) {
-                                Lesson lessonObj = new Lesson();
-                                lessonObj.setTime(lessonToTime(lesson));
-                                lessonObj.setDiscipline(discipline.getDisciplineCode());
-
-                                Day dayObj = new Day();
-                                dayObj.setDayOfWeek(dayToDayOfWeek(day));
-                                dayObj.getLessons().put(lessonObj.getTime(), lessonObj);
-
-                                professorMap.put(dayObj.getDayOfWeek(), dayObj);
-                            }
-                        }
-
-                    }
-                }
-                ProfessorSchedule professorSchedule = new ProfessorSchedule();
-                professorSchedule.setProfessorName(professor.getName());
-                professorSchedule.setSchedule(professorMap);
-                professorSchedules.add(professorSchedule);
-            }
-        }
-
-        List<DisciplineSchedule> disciplineSchedules = new ArrayList<>();
 
         for (Map.Entry<Integer, Discipline[][]> entry : grades.entrySet()) {
             String phase = entry.getKey().toString();
-            Discipline[][] phaseSchedule = entry.getValue();
-            Map<String, Map<String, List<Map<String, String>>>> disciplineMap = new HashMap<>();
+            Discipline[][] disciplines = entry.getValue();
 
-            for (int lesson = 0; lesson < 2; lesson++) {
-                for (int day = 0; day < 6; day++) {
-                    Discipline disciplineInSchedule = phaseSchedule[lesson][day];
-                    if (disciplineInSchedule != null) {
-                        String dayOfWeek = dayToDayOfWeek(day);
-                        String disciplineCode = disciplineInSchedule.getDisciplineCode();
-                        String time = lessonToTime(lesson);
+            for (int lesson = 0; lesson < disciplines.length; lesson++) {
+                for (int day = 0; day < disciplines[lesson].length; day++) {
+                    Discipline discipline = disciplines[lesson][day];
+                    if (discipline != null) {
+                        DisciplinesItem disciplineItem = new DisciplinesItem();
+                        disciplineItem.setFase(phase);
+                        disciplineItem.setWeekDay(dayToDayOfWeek(day));
+                        disciplineItem.setTime(lessonToTime(lesson));
+                        disciplineItem.setDisciplineCode(discipline.getDisciplineCode());
+                        disciplinesItems.add(disciplineItem);
 
-                        disciplineMap.computeIfAbsent(dayOfWeek, k -> new HashMap<>())
-                                .computeIfAbsent(disciplineCode, k -> new ArrayList<>())
-                                .add(Map.of("time", time));
+                        ProfessorsItem professorItem = new ProfessorsItem();
+                        professorItem.setProfessorName(discipline.getProfessorCode());
+                        professorItem.setWeekDay(dayToDayOfWeek(day));
+                        professorItem.setTime(lessonToTime(lesson));
+                        professorItem.setDisciplineName(discipline.getDisciplineCode());
+                        String professorName = "";
+                        for (Professor professor : professorList) {
+                            if(discipline.getProfessorCode().equals(professor.getCode())){
+                                professorName = professor.getName();
+
+                            }
+                        }
+                        professorItem.setProfessorName(professorName);
+                        professorsItems.add(professorItem);
                     }
+
+
+
+
                 }
             }
-
-            DisciplineSchedule disciplineSchedule = new DisciplineSchedule();
-            disciplineSchedule.setFase(phase);
-            disciplineSchedule.setSchedule(disciplineMap);
-            disciplineSchedules.add(disciplineSchedule);
         }
-        ResultGrid resultGrid = new ResultGrid();
-        resultGrid.setDisciplineSchedules(disciplineSchedules);
-        resultGrid.setProfessorSchedules(professorSchedules);
 
-        return resultGrid;
+        Response response = new Response();
+        response.setProfessors(professorsItems);
+        response.setDisciplines(disciplinesItems);
+
+
+        return response;
 
     }
 

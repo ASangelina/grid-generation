@@ -12,6 +12,7 @@ import io.javalin.http.staticfiles.Location;
 import io.javalin.json.JsonMapper;
 import io.javalin.vue.VueComponent;
 import org.jetbrains.annotations.NotNull;
+import resultado.Response;
 
 import java.lang.reflect.Type;
 
@@ -33,11 +34,11 @@ public class Main {
             Log.info("Receiving generator grid request...", Main.class);
             Transaction transaction = ctx.bodyAsClass(Transaction.class);
 
-            ResultGrid resultGrid = serviceGenerator.buildSchedule(transaction);
+            Response resultGrid = serviceGenerator.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
-            response.put("disciplines:",resultGrid.getDisciplineSchedules());
-            response.put("professors:",resultGrid.getProfessorSchedules());
+            response.put("disciplines:",resultGrid.getDisciplines());
+            response.put("professors:",resultGrid.getProfessors());
             ctx.json(response);
         });
 
@@ -45,11 +46,11 @@ public class Main {
             Log.info("Receiving generator grid request...", Main.class);
             Transaction transaction = ctx.bodyAsClass(Transaction.class);
 
-            ResultGrid resultGrid = serviceRestrict.buildSchedule(transaction);
+            Response resultGrid = serviceRestrict.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
-            response.put("disciplines:",resultGrid.getDisciplineSchedules());
-            response.put("professors:",resultGrid.getProfessorSchedules());
+            response.put("disciplines:",resultGrid.getDisciplines());
+            response.put("professors:",resultGrid.getProfessors());
             ctx.json(response);
         });
     }
