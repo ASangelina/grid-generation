@@ -2,7 +2,6 @@ package br.udesc;
 
 import br.udesc.entities.Transaction;
 import br.udesc.log.Log;
-import br.udesc.result.ResultGrid;
 import br.udesc.services.GridGeneratorService;
 import br.udesc.services.GridRestrict;
 import com.alibaba.fastjson.JSON;
@@ -37,8 +36,8 @@ public class Main {
             Response resultGrid = serviceGenerator.buildSchedule(transaction);
 
             JSONObject response = new JSONObject();
-            response.put("disciplines:",resultGrid.getDisciplines());
-            response.put("professors:",resultGrid.getProfessors());
+            response.put("disciplines", resultGrid.getDisciplines());
+            response.put("professors", resultGrid.getProfessors());
             ctx.json(response);
         });
 
@@ -48,9 +47,11 @@ public class Main {
 
             Response resultGrid = serviceRestrict.buildSchedule(transaction);
 
+            // acho melhor mover isso para dentro da camada de serviço e fazer com que o método serviceRestrict.buildSchedule
+            // retorne esse JSONObject montado
             JSONObject response = new JSONObject();
-            response.put("disciplines:",resultGrid.getDisciplines());
-            response.put("professors:",resultGrid.getProfessors());
+            response.put("disciplines", resultGrid.getDisciplines());
+            response.put("professors", resultGrid.getProfessors());
             ctx.json(response);
         });
     }
