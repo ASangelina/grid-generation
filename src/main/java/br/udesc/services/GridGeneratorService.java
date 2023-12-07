@@ -217,14 +217,11 @@ public class GridGeneratorService {
 
                             }
                         }
-                        professorItem.setProfessorName(professorName); // Substitua por "NOME DO PROFESSOR"
-
+                        professorItem.setProfessorName(professorName);
                         professorsItems.add(professorItem);
                     }
 
 
-                    // Aqui você precisa obter o nome do professor a partir do código do professor
-                    // Isso pode ser feito buscando o professor no seu banco de dados ou em outra estrutura de dados
 
                 }
             }

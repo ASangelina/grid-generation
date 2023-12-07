@@ -64,16 +64,25 @@
                                 <b-button type="is-dark" @click="submitData">
                                     Enviar arquivos
                                 </b-button>
+                                <b-button type="is-dark" @click="restrictedGrade">
+                                Enviar restrict
+                                </b-button>
                             </div>
                         </div>
                         <div id="result" class="column">
-                            <div class="box">
                                 <h2 class="title">Resultado</h2>
                                 <!-- TODO: montar grid de resultado -->
                                 <div v-if="result">
                                     {{ result.message }}
                                 </div>
-                            </div>
+                                    <div class="column">
+                                        <b-button  type="is-primary is-light" @click="exportDataProfessor">
+                                            Baixar CSV Professores
+                                        </b-button>
+                                        <b-button type="is-primary is-light" @click="exportDataDisciplina">
+                                            Baixar CSV Disciplinas
+                                        </b-button>
+                                    </div>
                         </div>
                     </div>
                 </div>
@@ -89,7 +98,8 @@
             return {
                 professor: {},
                 disciplines: {},
-                result: null
+                result: null,
+                postUrl: '/api/grid-generator',
             };
         },
         methods: {
@@ -128,7 +138,7 @@
             },
             async sendRequestToGeneratorAPI(payload) {
                 try {
-                    const response = await fetch('/api/grid-generator', {
+                    const response = await fetch(this.postUrl, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -146,6 +156,11 @@
                     console.error('Erro durante a requisição para a API:', error);
                     //TODO: mostrar um erro para o user ou redirecionar para uma página de erro
                 }
+            },
+            
+            async restrictedGrade() {
+                this.postUrl = '/api/grid-generator/restrict';
+                this.submitData();
             },
             async getProfessorArray() {
                 try {
@@ -238,7 +253,47 @@
 
                     reader.readAsText(this.disciplines);
                 });
-            }
+            },
+            exportDataProfessor(){
+                console.log("Professores:",this.result.professors);
+                const fileName = 'teste_' ;
+                const exportType = 'csv';
+                const fields = {
+                    'disciplineName' : 'Código',
+                    'professorName' : 'Professor(es)',
+                    'time' : 'Horário',
+                    'weekDay' : 'Dia',
+                };
+
+                exportFromJSON({
+                    data : this.result.professors,
+                    fileName : fileName,
+                    fields : fields,
+                    withBOM: true,
+                    exportType : exportType
+                });
+
+            },
+            exportDataDisciplina(){
+                console.log("disciplinas:",this.result.disciplines);
+                const fileName = 'teste_' ;
+                const exportType = 'csv';
+                const fields = {
+                    'fase' : 'Fase',
+                    'disciplineCode' : 'Código',
+                    'time' : 'Horário',
+                    'weekDay' : 'Dia',
+                };
+
+                exportFromJSON({
+                    data : this.result.disciplines,
+                    fileName : fileName,
+                    fields : fields,
+                    withBOM: true,
+                    exportType : exportType
+                });
+
+            },
         }
     });
 </script>
