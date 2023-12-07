@@ -1,4 +1,4 @@
-package resultado;
+package br.udesc.entities.result;
 
 public class DisciplinesItem{
 	private String fase;

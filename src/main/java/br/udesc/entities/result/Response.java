@@ -1,4 +1,4 @@
-package resultado;
+package br.udesc.entities.result;
 
 import java.util.List;
 

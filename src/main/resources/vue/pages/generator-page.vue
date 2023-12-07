@@ -21,7 +21,7 @@
                                 </span>
                                 <div class="columns content">
                                     <div class="column">
-                                        <h4>Professor</h4>
+                                        <h4>Professores</h4>
                                         <b-field>
                                             <b-upload v-model="professor"
                                                 accept=".csv" required validationMessage="Por valor selecione um arquivo"
@@ -61,28 +61,30 @@
                                         </b-field>
                                     </div>
                                 </div>
-                                <b-button type="is-dark" @click="submitData">
-                                    Enviar arquivos
-                                </b-button>
-                                <b-button type="is-dark" @click="restrictedGrade">
-                                Enviar restrict
-                                </b-button>
+                                <div class="content has-text-centered">
+                                    <div class="column">
+                                        <b-button type="is-dark" @click="submitData">
+                                            Grade Sem Restrição
+                                        </b-button>
+                                        <b-button type="is-dark" @click="restrictedGrade">
+                                            Grade Com Restrição
+                                        </b-button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="result" class="column">
+                            <div class="box">
                                 <h2 class="title">Resultado</h2>
                                 <!-- TODO: montar grid de resultado -->
-                                <div v-if="result">
-                                    {{ result.message }}
-                                </div>
-                                    <div class="column">
-                                        <b-button  type="is-primary is-light" @click="exportDataProfessor">
-                                            Baixar CSV Professores
-                                        </b-button>
-                                        <b-button type="is-primary is-light" @click="exportDataDisciplina">
-                                            Baixar CSV Disciplinas
-                                        </b-button>
-                                    </div>
+                                <b-button  type="is-primary is-light" @click="exportDataProfessor">
+                                    Baixar CSV Professores
+                                </b-button>
+                                <b-button type="is-primary is-light" @click="exportDataDisciplina">
+                                    Baixar CSV Disciplinas
+                                </b-button>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -256,7 +258,7 @@
             },
             exportDataProfessor(){
                 console.log("Professores:",this.result.professors);
-                const fileName = 'teste_' ;
+                const fileName = 'professores_grade' ;
                 const exportType = 'csv';
                 const fields = {
                     'disciplineName' : 'Código',
@@ -276,7 +278,7 @@
             },
             exportDataDisciplina(){
                 console.log("disciplinas:",this.result.disciplines);
-                const fileName = 'teste_' ;
+                const fileName = 'disciplinas_grade' ;
                 const exportType = 'csv';
                 const fields = {
                     'fase' : 'Fase',

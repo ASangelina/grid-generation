@@ -3,10 +3,9 @@ package br.udesc.services;
 import br.udesc.entities.Discipline;
 import br.udesc.entities.Professor;
 import br.udesc.entities.Transaction;
-import br.udesc.result.*;
-import resultado.DisciplinesItem;
-import resultado.ProfessorsItem;
-import resultado.Response;
+import br.udesc.entities.result.DisciplinesItem;
+import br.udesc.entities.result.ProfessorsItem;
+import br.udesc.entities.result.Response;
 
 import java.util.*;
 
