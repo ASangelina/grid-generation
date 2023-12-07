@@ -47,8 +47,7 @@ public class Main {
 
             Response resultGrid = serviceRestrict.buildSchedule(transaction);
 
-            // acho melhor mover isso para dentro da camada de serviço e fazer com que o método serviceRestrict.buildSchedule
-            // retorne esse JSONObject montado
+            
             JSONObject response = new JSONObject();
             response.put("disciplines", resultGrid.getDisciplines());
             response.put("professors", resultGrid.getProfessors());
